@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Anton&family=Antonio:wght@100;200;300;400;500;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/*scrollbar section design*/
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 0;
+}
+
+/*universal section design*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4784f7;
+}
+
+/*header section design*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    font-family: 'Antonio', sans-serif;
+    z-index: 10001;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+nav .navlist {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-dropdown,
+.navbar-dropdown a {
+    color: #222;
+}
+
+nav .navbar-dropbtn {
+    position: relative;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.navbar-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar-dropdown:hover .navbar-dropbtn {
+    letter-spacing: 3px;
+}
+
+nav .top-icons a,
+nav .navbar-logo a {
+    padding: 0 10px;
+}
+
+section {
+    padding: 120px 0;
+}
+
+/*hero section design*/
+
+.home {
+    padding: 100px 0 50px;
+}
+
+.home-content h1 {
+    font-size: 7rem;
+    font-family: 'Anton', sans-serif;
+    color: #fff;
+}
+
+.home-content p {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.home-content input {
+    padding: 10px 3rem;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font-family: 'Antonio', sans-serif;
+}
+
+.search-bar {
+    width: 80%;
+}
+
+.home-content input:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.home-content input::placeholder {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 30px;
+    width: 280px;
+    background-color: #5A38FD;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-family: 'Antonio', sans-serif;
+    transition: .3s ease;
+}
+
+.search-bar .btn:hover {
+    background-color: #222;
+    width: 400px;
+}
+
+.search-bar img {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    height: 60%;
+    transform: translateY(-50%);
+}
+
+.home-content .social-media-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.home-content .social-contents {
+    background-color: #222;
+    border-radius: 30px;
+}
+
+.home-content .social-media-icons a {
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+/*cta section design*/
+
+.cta {
+    position: relative;
+    padding: 30px 0;
+    background-color: #fff;
+    background-image: url('assets/cta-bg.png');
+    background-position: center;
+    background-size: 10%;
+
+}
+
+.cta h2 {
+    font-family: 'Anton', sans-serif;
+    color: #5A38FD;
+    font-size: 3rem;
+    letter-spacing: 5px;
+}
+
+.cta p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cta .btn {
+    border-radius: 30px;
+    width: 150px;
+    font-family: 'Antonio', sans-serif;
+    border: none;
+    outline: none;
+    transition: .3s ease;
+}
+
+.cta .btn:hover {
+    background: #5A38FD;
+    width: 100%;
+}
+
+/*featured book section design*/
+.featured-books {
+    background-color: #5A38FD;
+    padding: 40px 0;
+}
+
+.featured-books h2 {
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    font-size: 4rem;
+}
+
+.featured-books .row .col-md-3 {
+    background-color: #fff;
+    height: 400px;
+    border: 1px solid #222;
+}
+
+/*cta2 section design*/
+
+.cta2 {
+    position: relative;
+    padding: 30px 0;
+    background-color: #fff;
+    background-image: url('assets/cta-bg.png');
+    background-position: center;
+    background-size: 10%;
+}
+
+.cta2 h3 {
+    font-family: 'Anton', sans-serif;
+    color: #5A38FD;
+    font-size: 5rem;
+}
+
+.cta2 .btn {
+    background-color: #222;
+    font-family: 'Anton', sans-serif;
+    width: 150px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    transition: .3s ease;
+}
+
+.cta2 .btn:hover {
+    background-color: #5A38FD;
+    width: 100%;
+}
+
+/*books section design*/
+
+.books {
+    padding: 40px 0;
+    background-color: #5A38FD;
+}
+
+.books .row {
+    margin-bottom: 2rem;
+}
+
+.books .row-main-text {
+    display: flex;
+    align-items: center;
+}
+
+.books .row h2 {
+    display: inline-block;
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    margin-right: 1rem;
+    letter-spacing: 10px;
+}
+
+.books .col-md-2 {
+    background-color: #fff;
+    height: 400px;
+    border: 1px solid #222
+}
+
+.books .books-btn {
+    text-align: end;
+}
+
+.books .books-btn .btn {
+    border-radius: 30px;
+    width: 300px;
+    font-family: 'Anton', sans-serif;
+    border: none;
+    outline: none;
+    transition: .3s ease;
+}
+
+.books .books-btn .btn:hover {
+    width: 100%;
+    background-color: #fff;
+    color: #5A38FD;
+}
+
+/*ratings section design*/
+
+.ratings {
+    position: relative;
+    padding: 30px 0;
+    background-color: #fff;
+    background-image: url('assets/cta-bg.png');
+    background-position: center;
+    background-size: 10%;
+}
