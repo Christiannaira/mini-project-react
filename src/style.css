@@ -84,9 +84,21 @@ nav .dropdown-content {
     letter-spacing: 3px;
 }
 
+nav .top-icons a {
+    display: inline-flex;
+    align-items: center;
+    transition: .45s ease;
+}
+
 nav .top-icons a,
 nav .navbar-logo a {
-    padding: 0 10px;
+    padding: 10px;
+}
+
+nav .top-icons a:hover {
+    background-color: #5A38FD;
+    border-radius: 30px;
+    transform: scale(1.2);
 }
 
 section {
@@ -144,7 +156,9 @@ section {
     right: 0;
     top: 0;
     height: 100%;
-    border-radius: 30px;
+    border-radius: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     width: 280px;
     background-color: #5A38FD;
     color: #fff;
@@ -197,7 +211,7 @@ section {
 .cta h2 {
     font-family: 'Anton', sans-serif;
     color: #5A38FD;
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: 5px;
 }
 
@@ -323,10 +337,100 @@ section {
 /*ratings section design*/
 
 .ratings {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
     position: relative;
-    padding: 30px 0;
-    background-color: #fff;
+    height: 50vh;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
     background-image: url('assets/cta-bg.png');
     background-position: center;
     background-size: 10%;
+    display: flex;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide>.container {
+    border-radius: 30px;
+}
+
+@media (max-width: 760px) {
+    .swiper-button-next {
+        right: 20px;
+        transform: rotate(90deg);
+    }
+
+    .swiper-button-prev {
+        left: 20px;
+        transform: rotate(90deg);
+    }
+}
+
+.swiper-slide .profile {
+    padding: 2rem;
+    box-shadow: 0px 8px 16px 0 rgba(90, 56, 253, 0.8);
+    cursor: pointer;
+    transition: .45s ease;
+}
+
+.swiper-slide .profile:hover {
+    transform: translateY(-10px);
+}
+
+.swiper-slide .profile-info h3 {
+    font-size: 1.5rem;
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    align-items: center;
+    font-weight: 6000;
+    color: #5A38FD;
+}
+
+.swiper-slide .profile-info h3 i {
+    margin-left: 5px;
+    color: rgb(18, 133, 248);
+    font-size: 1.3rem;
+}
+
+.swiper-slide .profile-info span {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #444;
+}
+
+.swiper-slide .profile-text {
+    margin: 20px 0 0;
+}
+
+.swiper-slide .profile-text p {
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
+    font-weight: 300;
+}
+
+.swiper-slide .reactions a {
+    display: inline-flex;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.swiper-slide .reactions a:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }

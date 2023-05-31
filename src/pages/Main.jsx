@@ -1,26 +1,23 @@
+import { Outlet, Link, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Navbar from './Navbar'
-import Hero from './Hero';
-import Cta from './Cta';
-import FeaturedBooks from './FeaturedBooks';
-import Cta2 from './CtaTwo';
-import Books from './Books';
-import Ratings from './Ratings';
+import Index from './Index';
+import Links from './Links';
+
+
 
 function Main() {
 
 
-    window.onscroll = function () {
-        () => {
-            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-                document.getElementById("header").style.top = '0';
-            } else {
-                document.getElementById("header").style.top = "-70px";
-            }
-        }
-    }
 
     return (
+
         <>
+
+            <Helmet>
+                <title>eHUB - Hero</title>
+            </Helmet>
+
             {/*header section layout*/}
             <header id="header">
                 <Navbar />
@@ -28,14 +25,13 @@ function Main() {
 
             {/*main section layout*/}
             <main>
-                <Hero />
-                <Cta />
-                <FeaturedBooks />
-                <Cta2 />
-                <Books />
-                <Ratings />
+                <Index />
             </main>
 
+            {/*footer section layout*/}
+            <footer>
+                <Links />
+            </footer>
 
         </>
     )

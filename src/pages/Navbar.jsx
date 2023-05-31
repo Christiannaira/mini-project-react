@@ -6,6 +6,7 @@ import ContactIcon from '../assets/contact-icon.png'
 
 function Navbar() {
 
+
     return (
         <>
             <nav>
@@ -46,11 +47,13 @@ function Navbar() {
 
                 </div>
 
+
                 <div className="top-icons">
-                    <a href="#"><img src={HomeIcon} alt="home-icon" width={'20px'} /></a>
-                    <a href="#"><img src={Acccount} alt="login&signin" width={'20px'} /></a>
-                    <a href="#"><img src={ContactIcon} alt="contact-icon" width={'20px'} /></a>
-                    <a href="#"><img src={Bookmark} alt="bookmarks" width={'20px'} /></a>
+
+                    <a href="/" data-bs-toggle="tooltip" data-bs-placement="top" title="Home"><img src={HomeIcon} alt="home-icon" width={'20px'} /></a>
+                    <a href="/account" data-bs-toggle="tooltip" data-bs-placement="top" title="Account"><img src={Acccount} alt="login&signin" width={'20px'} /></a>
+                    <a href="/contact" data-bs-toggle="tooltip" data-bs-placement="top" title="Contact"><img src={ContactIcon} alt="contact-icon" width={'20px'} /></a>
+                    <a href="/bookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Bookmark"><img src={Bookmark} alt="bookmarks" width={'20px'} /></a>
 
                 </div>
             </nav>

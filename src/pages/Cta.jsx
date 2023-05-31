@@ -5,16 +5,16 @@ function Cta() {
         <>
             <section className="cta" id="cta">
                 <div className="container cta-content">
-                    <div className="row">
-                        <div className="col-md-3">
+                    <div className="row text-center">
+                        <div className="col-md-12">
+                            <h2>START READING</h2>
+                        </div>
+                        <div className="col-md-12 mt-3 mb-3">
                             <img src={CtaImage} alt="cta-image" width={'270px'} />
                         </div>
-                        <div className="col-md-9">
-                            <h2>START READING</h2>
-                            <p>Embark on an extraordinary journey by immersing yourself in the captivating world of literature. Whether you're seeking an escape from reality, a chance to expand your knowledge, or a way to ignite your imagination, there's no better time to start reading than now. </p>
-                            <div className='mt-3'>
-                                <button className='btn btn-dark'>read</button>
-                            </div>
+
+                        <div className='mt-3'>
+                            <button className='btn btn-dark'>read</button>
                         </div>
                     </div>
 
