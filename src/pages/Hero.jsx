@@ -26,7 +26,7 @@ function Hero() {
                             <div className="search-bar">
                                 <img src={SearchAnimation} alt="" />
                                 <input type="text" className='form-control d-block' placeholder='search your favorite author, books...' />
-                                <button className='btn btn-dark'>Submit</button>
+                                <button className='btn btn-dark'>Search</button>
                             </div>
                         </div>
                     </div>

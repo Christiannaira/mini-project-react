@@ -30,6 +30,7 @@ function Ratings() {
     return (
         <>
             <div className="ratings">
+                {/*swiperjs layout*/}
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
