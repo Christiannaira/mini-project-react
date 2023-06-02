@@ -1,11 +1,11 @@
-import Main from './pages/Main'
+import Index from "./pages/Index"
 
 function App() {
 
 
   return (
     <>
-      <Main />
+      <Index />
     </>
   )
 }

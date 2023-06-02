@@ -11,11 +11,13 @@ function Index() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route index element={<MainPage />} />
-                <Route path="/account" element={<Accounts />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/bookmarks" element={<Bookmark />} />
-                <Route path="*" element={<NotFound />} />
+                <Route path='/' element={<Main />}>
+                    <Route index element={<MainPage />} />
+                    <Route path="/account" element={<Accounts />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/bookmarks" element={<Bookmark />} />
+                    <Route path="*" element={<NotFound />} />
+                </Route>
             </Routes>
         </BrowserRouter>
     )

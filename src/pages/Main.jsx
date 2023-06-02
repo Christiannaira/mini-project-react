@@ -3,7 +3,10 @@ import { Helmet } from 'react-helmet';
 import Navbar from './Navbar'
 import Index from './Index';
 import Links from './Links';
-
+import HomeIcon from '../assets/home-icon.png'
+import Acccount from '../assets/accounts.png'
+import Bookmark from '../assets/bookmark.png'
+import ContactIcon from '../assets/contact-icon.png'
 
 
 function Main() {
@@ -25,7 +28,7 @@ function Main() {
 
             {/*main section layout*/}
             <main>
-                <Index />
+                <Outlet />
             </main>
 
             {/*footer section layout*/}
