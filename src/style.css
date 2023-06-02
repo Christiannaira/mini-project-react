@@ -90,12 +90,12 @@ nav .top-icons a {
     transition: .45s ease;
 }
 
-nav .top-icons a,
+nav .top-icons .icons,
 nav .navbar-logo a {
     padding: 10px;
 }
 
-nav .top-icons a:hover {
+nav .top-icons .icons:hover {
     background-color: #5A38FD;
     border-radius: 30px;
     transform: scale(1.2);
