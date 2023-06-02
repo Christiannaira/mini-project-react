@@ -10,7 +10,7 @@ function FeaturedBooks() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=web-development&orderBy=newest&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
+          "https://www.googleapis.com/books/v1/volumes?q=top-books&orderBy=newest&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -40,7 +40,7 @@ function FeaturedBooks() {
           <h2>BEST BOOKS</h2>
 
           <div className="row">
-            
+
             {books.map((book) => (
               <div key={book.id} className="book col-lg-4 col-md-6 col-sm-12">
                 <div className="mb-3">
