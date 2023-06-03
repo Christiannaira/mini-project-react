@@ -1,4 +1,5 @@
 import CtaAnimation from '../assets/cta-animation.gif'
+import { Link } from 'react-router-dom';
 
 function CtaTwo() {
     return (
@@ -14,7 +15,8 @@ function CtaTwo() {
                                 <h3>SOMETHING MISSING?</h3>
                             </div>
                             <div className="cta2-btn text-center mt-3">
-                                <button className='btn btn-dark'>ALL BOOKS</button>
+                                <Link to='/categories'><button className='btn btn-dark'>VIEW ALL BOOKS</button></Link>
+
                             </div>
 
                         </div>

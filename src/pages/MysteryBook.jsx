@@ -10,7 +10,7 @@ const MysteryBook = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=mystery&orderBy=newest&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
+          "https://www.googleapis.com/books/v1/volumes?q=mystery&orderBy=newest&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
         );
         setBooks(response.data.items);
       } catch (error) {

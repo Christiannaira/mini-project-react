@@ -13,8 +13,7 @@ function MainPage() {
             <Cta />
             <FeaturedBooks />
             <Cta2 />
-            <Books />
-            <Ratings />
+            {/* <Books /> */}
         </>
     )
 }
