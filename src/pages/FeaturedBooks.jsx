@@ -10,7 +10,7 @@ function FeaturedBooks() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=top-books&orderBy=newest&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
+          "https://www.googleapis.com/books/v1/volumes?q=best-books&orderBy=newest&maxResults=24&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -37,34 +37,32 @@ function FeaturedBooks() {
     <>
       <section className="featured-books" id="featured-books">
         <div className="container featured-books-content">
+
           <h2>BEST BOOKS</h2>
 
-          <div className="row">
+          <div className="row mt-3">
 
             {books.map((book) => (
-              <div key={book.id} className="book col-lg-4 col-md-6 col-sm-12">
+
+              <div className="book col-lg-2 text-center">
+
                 <div className="mb-3">
-                  <div className="text-white">
-                    <h5 className="">{book.volumeInfo.title}</h5>
-                    {book.volumeInfo.authors && (
-                      <p className="">
-                        Author: {book.volumeInfo.authors.join(", ")}
-                      </p>
-                    )}
+
+                  <div className="featured-book-img p-1">
+                    <div className="inner-block p-1">
+                      <img src={book.volumeInfo.imageLinks.smallThumbnail} alt={`${book.volumeInfo.title} Book Cover`} onClick={() => handleBookClick(book)} title={book.volumeInfo.title} height={'310px'} width={'100%'} />
+                    </div>
                   </div>
-                  {book.volumeInfo.imageLinks && (
-                    <img
-                      className="img-thumbnail fluid"
-                      src={book.volumeInfo.imageLinks.thumbnail}
-                      alt="Book Cover"
-                      onClick={() => handleBookClick(book)}
-                    />
-                  )}
+
+                  {/* <div className="text-white featued-book-text text-uppercase">
+                    <h5 className="">{book.volumeInfo.title}</h5>
+                    <h5> Author: {book.volumeInfo.authors}</h5>
+                  </div> */}
+
                 </div>
               </div>
             ))}
           </div>
-
 
         </div>
       </section>

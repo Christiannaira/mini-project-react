@@ -3,6 +3,7 @@ import Acccount from '../assets/accounts.png'
 import Bookmark from '../assets/bookmark.png'
 import ContactIcon from '../assets/contact-icon.png'
 import { Link } from 'react-router-dom'
+import Logo from '../assets/logo.png'
 
 
 function Navbar() {
@@ -12,7 +13,7 @@ function Navbar() {
         <>
             <nav>
                 <div className="navbar-logo">
-                    <a href="#">eHUB</a>
+                    <a href="#">Ehub<img src={Logo} alt="logo" /></a>
                 </div>
                 <div className="navlist">
                     <div className="navbar-dropdown">

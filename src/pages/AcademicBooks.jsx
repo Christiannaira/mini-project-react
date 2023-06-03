@@ -10,7 +10,7 @@ const AcademicBooks = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=academic&orderBy=newest&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
+          "https://www.googleapis.com/books/v1/volumes?q=academic&orderBy=newest&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -32,46 +32,32 @@ const AcademicBooks = () => {
   }
 
   return (
-  
-  
+
+
     <div className="row">
-    {books.map((book) => (
-      <div key={book.id} className="book col-lg-4 col-md-6 col-sm-12">
-        <div className="mb-3">
-          <div className="text-white">
-            <h5 className="">{book.volumeInfo.title}</h5>
-            {book.volumeInfo.authors && (
-              <p className="">Author: {book.volumeInfo.authors.join(", ")}</p>
+      {books.map((book) => (
+        <div key={book.id} className="book col-lg-4 col-md-6 col-sm-12">
+          <div className="mb-3">
+            <div className="text-white">
+              <h5 className="">{book.volumeInfo.title}</h5>
+              {book.volumeInfo.authors && (
+                <p className="">Author: {book.volumeInfo.authors.join(", ")}</p>
+              )}
+            </div>
+            {book.volumeInfo.imageLinks && (
+              <img
+                className="img-thumbnail fluid"
+                src={book.volumeInfo.imageLinks.thumbnail}
+                alt="Book Cover"
+                onClick={() => handleBookClick(book)}
+              />
             )}
           </div>
-          {book.volumeInfo.imageLinks && (
-            <img
-              className="img-thumbnail fluid"
-              src={book.volumeInfo.imageLinks.thumbnail}
-              alt="Book Cover"
-              onClick={() => handleBookClick(book)}
-            />
-          )}
         </div>
-      </div>
-    ))}
-  </div>
-  
-  
-  
-  
+      ))}
+    </div>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   );
 };
 

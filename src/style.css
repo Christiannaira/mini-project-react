@@ -90,9 +90,13 @@ nav .top-icons a {
     transition: .45s ease;
 }
 
-nav .top-icons .icons,
-nav .navbar-logo a {
+nav .top-icons .icons {
     padding: 10px;
+}
+
+nav .navbar-logo a {
+    display: flex;
+    align-items: center;
 }
 
 nav .top-icons .icons:hover {
@@ -211,33 +215,14 @@ section {
 .cta h2 {
     font-family: 'Anton', sans-serif;
     color: #5A38FD;
-    font-size: 4rem;
+    font-size: 10rem;
     letter-spacing: 5px;
 }
 
-.cta p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.cta .btn {
-    border-radius: 30px;
-    width: 150px;
-    font-family: 'Antonio', sans-serif;
-    border: none;
-    outline: none;
-    transition: .3s ease;
-}
-
-.cta .btn:hover {
-    background: #5A38FD;
-    width: 100%;
-}
 
 /*featured book section design*/
 .featured-books {
-    background-color: #5A38FD;
+    background: linear-gradient(to top, rgb(90, 56, 253), rgba(90, 56, 253, .1));
     padding: 40px 0;
 }
 
@@ -247,10 +232,23 @@ section {
     font-size: 4rem;
 }
 
-.featured-books .row .col-md-3 {
+.featured-books .featured-book-img {
+    background-color: #222;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.featured-books .featured-book-img .inner-block {
     background-color: #fff;
-    height: 400px;
-    border: 1px solid #222;
+}
+
+
+.featured-books .featured-book-img:hover {
+    transform: translateY(-10px);
+}
+
+.featured-books .featured-book-img:hover img {
+    filter: hue-rotate(90deg);
 }
 
 /*cta2 section design*/
@@ -292,47 +290,6 @@ section {
     background-color: #5A38FD;
 }
 
-.books .row {
-    margin-bottom: 2rem;
-}
-
-.books .row-main-text {
-    display: flex;
-    align-items: center;
-}
-
-.books .row h2 {
-    display: inline-block;
-    color: #fff;
-    font-family: 'Anton', sans-serif;
-    margin-right: 1rem;
-    letter-spacing: 10px;
-}
-
-.books .col-md-2 {
-    background-color: #fff;
-    height: 400px;
-    border: 1px solid #222
-}
-
-.books .books-btn {
-    text-align: end;
-}
-
-.books .books-btn .btn {
-    border-radius: 30px;
-    width: 300px;
-    font-family: 'Anton', sans-serif;
-    border: none;
-    outline: none;
-    transition: .3s ease;
-}
-
-.books .books-btn .btn:hover {
-    width: 100%;
-    background-color: #fff;
-    color: #5A38FD;
-}
 
 /*ratings section design*/
 
