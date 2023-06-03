@@ -222,7 +222,7 @@ section {
 
 /*featured book section design*/
 .featured-books {
-    background: linear-gradient(to top, rgb(90, 56, 253), rgba(90, 56, 253, .1));
+    background: linear-gradient(to bottom, rgb(90, 56, 253), rgba(90, 56, 253, .1));
     padding: 40px 0;
 }
 
@@ -230,6 +230,7 @@ section {
     color: #fff;
     font-family: 'Anton', sans-serif;
     font-size: 4rem;
+    text-align: center;
 }
 
 .featured-books .featured-book-img {
@@ -284,24 +285,25 @@ section {
 }
 
 /*books section design*/
-
+/* 
 .books {
     padding: 40px 0;
-    background-color: #5A38FD;
-}
+    background-color: red;
+} */
 
 
 /*ratings section design*/
 
 .ratings {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
+    background-color: #f7f7f7;
+    background: linear-gradient(rgba(90, 56, 253, .5), rgba(90, 56, 253, .9)), url('./assets/links-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     position: relative;
-    height: 50vh;
+    height: 70vh;
 }
 
 .swiper {
@@ -312,13 +314,11 @@ section {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background-image: url('assets/cta-bg.png');
-    background-position: center;
-    background-size: 10%;
     display: flex;
     padding: 0 10px;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .swiper-slide>.container {
@@ -338,45 +338,57 @@ section {
 }
 
 .swiper-slide .profile {
-    padding: 2rem;
+    padding: 1rem;
     box-shadow: 0px 8px 16px 0 rgba(90, 56, 253, 0.8);
     cursor: pointer;
     transition: .45s ease;
+    background-image: url('assets/cta-bg.png');
+    background-position: center;
+    background-size: 10%;
+    background-color: #fff;
 }
 
 .swiper-slide .profile:hover {
     transform: translateY(-10px);
 }
 
-.swiper-slide .profile-info h3 {
-    font-size: 1.5rem;
-    font-family: 'Anton', sans-serif;
-    display: flex;
+.swiper-slide .profile-info h5 {
+    font-size: 1rem, ;
+    font-family: 'Open Sans', sans-serif;
     align-items: center;
-    font-weight: 6000;
+    font-weight: 500;
+    line-height: 0;
     color: #5A38FD;
+
 }
 
-.swiper-slide .profile-info h3 i {
-    margin-left: 5px;
+.swiper-slide .profile-info h5 i {
     color: rgb(18, 133, 248);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    margin-left: 1px;
 }
 
 .swiper-slide .profile-info span {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    color: #444;
+    font-weight: 100;
+    font-size: 16px;
 }
 
-.swiper-slide .profile-text {
-    margin: 20px 0 0;
+.start-ratings {
+    margin: 10px 0 10px;
+}
+
+.start-ratings i {
+    margin-right: 2px;
+    color: orange;
 }
 
 .swiper-slide .profile-text p {
     font-family: 'Open Sans', sans-serif;
-    color: #444;
-    font-weight: 300;
+    font-weight: 400;
+    color: #222;
+    text-align: start;
+
 }
 
 .swiper-slide .reactions a {
@@ -390,4 +402,286 @@ section {
 .swiper-slide .reactions a:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+/*links section design*/
+
+.links {
+    background-color: #5A38FD;
+    padding: 10px;
+}
+
+.links a {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.links a i {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: .3s ease;
+}
+
+.links a:hover i {
+    transform: rotate(36deg);
+}
+
+.links span {
+    color: #fff;
+    font-family: 'Antonio', sans-serif;
+    user-select: none;
+}
+
+
+
+/*categories section design*/
+
+.categories {
+    background-image: url('assets/cta-bg.png');
+    background-position: center;
+    background-size: 10%;
+    background-color: #fff;
+    height: 100%;
+    padding: 100px 0;
+}
+
+.categories h1 {
+    font-size: 7rem;
+    font-family: 'Anton', sans-serif;
+    color: #5A38FD;
+}
+
+.categories-content a {
+    text-decoration: none;
+    font-size: 2rem;
+    transition: .3s ease;
+
+}
+
+.categories-content a:hover {
+    text-decoration: underline;
+    letter-spacing: 5px;
+}
+
+/*accounts section design*/
+
+.breadcrumb {
+    left: 0;
+    top: 70px;
+    position: fixed;
+    z-index: 1000;
+    background-color: #5A38FD;
+    width: 100%;
+    color: #ddd;
+    font-family: 'Antonio', sans-serif;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    user-select: none;
+}
+
+.breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.breadcrumb i {
+    font-size: 1.2rem;
+}
+
+.accounts {
+    padding: 100px 0 50px;
+    background-image: url('assets/cta-bg.png');
+    background-position: center;
+    background-size: 10%;
+    background-color: #fff;
+    height: 100%;
+}
+
+.main-content h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 6rem;
+    color: #5A38FD;
+}
+
+.accounts-content h3 {
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+}
+
+.accounts-content label {
+    display: block;
+}
+
+.accounts-content input[type='text'] {
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 10px 0;
+    padding: 14px;
+    box-shadow: 0px 8px 16px 0 rgba(90, 56, 253, .5);
+}
+
+.accounts-content .col-md-6 {
+    padding: 2rem;
+    background-color: #5A38FD;
+}
+
+.accounts-content .col-md-6 span {
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.accounts-content .col-md-6 span:hover {
+    text-decoration: underline;
+}
+
+.accounts-content .col-md-6 .rememberMe,
+.accounts-content .col-md-6 .acceptTC {
+    margin: 10px 0 5px
+}
+
+
+
+.accounts-content .col-md-6 .rememberMe span,
+.accounts-content .col-md-6 .acceptTC span {
+    font-weight: 400;
+}
+
+.accounts-content .col-md-6 .acceptTC span a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.accounts-content .col-md-6 .acceptTC span a:hover {
+    text-decoration: underline;
+}
+
+.accounts-content .col-md-6 .rememberMe span:hover,
+.accounts-content .col-md-6 .acceptTC span:hover {
+    text-decoration: none;
+}
+
+.accounts-content input[type='text']::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.accounts-content .col-md-6 .btn {
+    background-color: #fff;
+    color: #5A38FD;
+    border-radius: 0;
+    width: 100px;
+    border: none;
+    outline: none;
+    transition: .3s ease;
+}
+
+.accounts-content .col-md-6 .btn:hover {
+    width: 140px;
+}
+
+.accounts-content .col-md-6 p,
+.accounts-content .col-md-6 p a {
+    color: #fff;
+}
+
+.accounts-content .col-md-6 p a {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.accounts-content .col-md-6 p a:hover {
+    text-decoration: underline;
+}
+
+
+/*contact section design*/
+
+.contact {
+    padding: 100px 0 10px;
+    background-image: url('assets/cta-bg.png');
+    background-position: center;
+    background-size: 10%;
+    background-color: #fff;
+    height: 100%;
+}
+
+.contact .contact-row {
+    position: relative;
+}
+
+.contact .contact-form {
+
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0px 5px 16px 0 rgba(90, 56, 253, .9);
+}
+
+.contact .contact-form h2 {
+    color: #5A38FD;
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+}
+
+.contact-row .row {
+    background-color: rgb(90, 56, 253);
+    padding: 1rem;
+}
+
+.contact-row .row .col-md-6 {
+    color: #fff;
+}
+
+.infoOne,
+.infoTwo,
+.infoThree {
+    margin: 20px 0;
+}
+
+.contact-row .row .col-md-6 h3 {
+    font-family: 'Anton', sans-serif;
+}
+
+.contact-row .row .col-md-6 span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+.contact-form input[type='text'],
+.contact-form textarea {
+    border: none;
+    border-bottom: 2px solid #222 !important;
+    outline: none;
+    border-radius: 0;
+    padding: 1rem;
+    margin-bottom: 10px;
+}
+
+
+.contact-form input[type='text']:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: none;
+
+}
+
+.contact-form input[type='text']::placeholder,
+.contact-form textarea::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+
+/*bookmarks section design*/
+
+.bookmarks {
+    background-image: url('assets/cta-bg.png');
+    background-position: center;
+    background-size: 10%;
+    background-color: #fff;
+    height: 100vh;
 }

@@ -13,7 +13,7 @@ function Navbar() {
         <>
             <nav>
                 <div className="navbar-logo">
-                    <a href="#">Ehub<img src={Logo} alt="logo" /></a>
+                    <Link to='/'><a href="#">Ehub<img src={Logo} alt="logo" /></a></Link>
                 </div>
                 <div className="navlist">
                     <div className="navbar-dropdown">

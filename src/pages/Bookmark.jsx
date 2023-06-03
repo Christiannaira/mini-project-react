@@ -1,9 +1,12 @@
 function Bookmark() {
     return (
         <>
-            <div className="container border m-5 p-5">
-                <h1>BOOKMARK</h1>
-            </div>
+            <section className="bookmarks">
+                <div className="container bookmarks-content">
+                    <h1>BOOKMARK</h1>
+                </div>
+            </section>
+
         </>
     )
 }
