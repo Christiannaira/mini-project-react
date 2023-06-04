@@ -1,5 +1,8 @@
 import AccountAnimation from '../assets/account-animation.gif'
 import { Link } from 'react-router-dom';
+import SignIn from '../components/auth/SignIn';
+import SignUp from '../components/auth/SignUp';
+import AuthDetails from '../components/auth/AuthDetails';
 
 function Accounts() {
     return (
@@ -7,46 +10,33 @@ function Accounts() {
             <section className="accounts">
                 {/*breadcrumb section layout*/}
                 <div className='breadcrumb'>
-                    <Link to='/'>Home</Link><i class='bx bx-chevron-right'></i> Account <i class='bx bx-chevron-right'></i>
+                    <Link to='/'>Home</Link><i className='bx bx-chevron-right'></i> Account <i className='bx bx-chevron-right'></i>
                 </div>
+
+                {/* account section */}
                 <div className="container accounts-content">
                     <div className="main-content text-center">
                         <h1>YOUR ACCOUNT</h1>
                         <img src={AccountAnimation} alt="account-animation" width={'300px'} />
                     </div>
+
                     <div className="row">
                         <div className="col-md-6">
+                        {/* sign in section */}
                             <h3>Sign In</h3>
-                            <form action="">
-                                <input type="text" placeholder='Username' className='form-control' />
-                                <input type="text" placeholder='Password' className='form-control' />
-                                <span>Forgot Password?</span>
-                                <label className='rememberMe' htmlFor='rememberMe'>
-                                    <input type="checkbox" id='rememberMe' /> <span>Remember me</span>
-                                </label>
-                                <div className="account-btn">
-                                    <a href="" className='btn btn-success'>Sign In</a>
-                                </div>
-                                <div className='mt-2'>
-                                    <p>Don't have an account? <a href="">Sign up</a></p>
-                                </div>
-                            </form>
+                            <SignIn />
                         </div>
+
+                        {/* sign up section */}
                         <div className="col-md-6">
                             <h3>Sign Up</h3>
-                            <form action="">
-                                <input type="text" placeholder='Email' className='form-control' />
-                                <input type="text" placeholder='Username' className='form-control' />
-                                <input type="text" placeholder='Password' className='form-control' />
-                                <input type="text" placeholder='Confirm Password' className='form-control' />
-                                <label className='acceptTC' htmlFor="accept">
-                                    <input type="checkbox" id="accept" /> <span>Accept <a >Terms & Conditions</a></span>
-                                </label>
-                                <a href="#" className='btn btn-success'>Sign Up</a>
-                            </form>
+                            <SignUp />
                         </div>
+
+                        <AuthDetails />
                     </div>
-                </div>
+</div>
+                
             </section>
 
         </>
