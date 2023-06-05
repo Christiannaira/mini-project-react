@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 
-function Business() {
+function ArtAndPhotography() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=Business&orderBy=newest&maxResults=12&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
+          "https://www.googleapis.com/books/v1/volumes?q=Photographyart&orderBy=newest&maxResults=12&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -24,7 +24,7 @@ function Business() {
     <>
       <section className="featured-books" id="featured-books">
         <div className="container featured-books-content">
-          <h2>Business</h2>
+          <h2>Art & Photography</h2>
 
           <div className="row mt-3">
             {books.map((book) => (
@@ -52,4 +52,4 @@ function Business() {
   );
 }
 
-export default Business;
+export default ArtAndPhotography;
