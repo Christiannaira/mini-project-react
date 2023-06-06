@@ -22,12 +22,10 @@ function Accounts() {
 
                     <div className="row">
                         <div className="col-md-6">
-                        {/* sign in section */}
                             <h3>Sign In</h3>
                             <SignIn />
                         </div>
 
-                        {/* sign up section */}
                         <div className="col-md-6">
                             <h3>Sign Up</h3>
                             <SignUp />
@@ -35,7 +33,7 @@ function Accounts() {
 
                         <AuthDetails />
                     </div>
-</div>
+                </div>
                 
             </section>
 
