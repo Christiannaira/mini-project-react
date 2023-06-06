@@ -4,7 +4,8 @@ import Bookmark from '../assets/bookmark.png'
 import ContactIcon from '../assets/contact-icon.png'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/logo.png'
-
+import LightMode from '../assets/lightmode.png'
+import DarkMode from '../assets/darkmode.png'
 
 function Navbar() {
 
@@ -15,39 +16,6 @@ function Navbar() {
                 <div className="navbar-logo">
                     <Link to='/'><a href="#">Ehub<img src={Logo} alt="logo" /></a></Link>
                 </div>
-                <div className="navlist">
-                    <div className="navbar-dropdown">
-                        <button className="navbar-dropbtn">categories</button>
-                        <div className="dropdown-content">
-                            <div class="dropdown-header">
-                                <h2>Mega Menu</h2>
-                            </div>
-                            <div class="dropdown-row container">
-                                <div className="row">
-                                    <div class="dropdown-column col-md-4">
-                                        <h3>Category 1</h3>
-                                        <a href="#">Link 1</a>
-                                        <a href="#">Link 2</a>
-                                        <a href="#">Link 3</a>
-                                    </div>
-                                    <div class="dropdown-column col-md-4">
-                                        <h3>Category 2</h3>
-                                        <a href="#">Link 1</a>
-                                        <a href="#">Link 2</a>
-                                        <a href="#">Link 3</a>
-                                    </div>
-                                    <div class="dropdown-column col-md-4">
-                                        <h3>Category 3</h3>
-                                        <a href="#">Link 1</a>
-                                        <a href="#">Link 2</a>
-                                        <a href="#">Link 3</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
 
 
                 <div className="top-icons">
@@ -55,8 +23,8 @@ function Navbar() {
                     <Link to="/account" data-bs-toggle="tooltip" data-bs-placement="top" title="Account" className='icons'><img src={Acccount} alt="login&signin" width={'20px'} /></Link>
                     <Link to="/contact" data-bs-toggle="tooltip" data-bs-placement="top" title="Contact" className='icons'><img src={ContactIcon} alt="contact-icon" width={'20px'} /></Link>
                     <Link to="/bookmarks" data-bs-toggle="tooltip" data-bs-placement="top" title="Bookmark" className='icons'><img src={Bookmark} alt="bookmarks" width={'20px'} /></Link>
-
-
+                    <a data-bs-toggle="tooltip" data-bs-placement="top" className='icons lightmode'>
+                        <img src={LightMode} alt="" width={'20px'} /></a>
                 </div>
             </nav>
         </>

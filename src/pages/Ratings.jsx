@@ -74,8 +74,8 @@ function Ratings() {
                                 </div>
                                 <div className="reactions">
                                     <a ><i class='bx bx-heart'></i></a>
-                                    <a href=""><i class='bx bx-like' ></i></a>
-                                    <a href=""><i class='bx bx-dislike' ></i></a>
+                                    <a ><i class='bx bx-like' ></i></a>
+                                    <a ><i class='bx bx-dislike' ></i></a>
                                 </div>
                             </div>
 
@@ -114,9 +114,9 @@ function Ratings() {
                                     </div>
                                 </div>
                                 <div className=" reactions">
-                                    <a href=""><i class='bx bx-heart'></i></a>
-                                    <a href=""><i class='bx bx-like' ></i></a>
-                                    <a href=""><i class='bx bx-dislike' ></i></a>
+                                    <a ><i class='bx bx-heart'></i></a>
+                                    <a ><i class='bx bx-like' ></i></a>
+                                    <a ><i class='bx bx-dislike' ></i></a>
                                 </div>
                             </div>
 
@@ -154,9 +154,9 @@ function Ratings() {
                                     </div>
                                 </div>
                                 <div className="reactions">
-                                    <a href=""><i class='bx bx-heart'></i></a>
-                                    <a href=""><i class='bx bx-like' ></i></a>
-                                    <a href=""><i class='bx bx-dislike' ></i></a>
+                                    <a ><i class='bx bx-heart'></i></a>
+                                    <a ><i class='bx bx-like' ></i></a>
+                                    <a ><i class='bx bx-dislike' ></i></a>
                                 </div>
                             </div>
 
@@ -195,9 +195,9 @@ function Ratings() {
                                     </div>
                                 </div>
                                 <div className="reactions">
-                                    <a href=""><i class='bx bx-heart'></i></a>
-                                    <a href=""><i class='bx bx-like' ></i></a>
-                                    <a href=""><i class='bx bx-dislike' ></i></a>
+                                    <a ><i class='bx bx-heart'></i></a>
+                                    <a ><i class='bx bx-like' ></i></a>
+                                    <a ><i class='bx bx-dislike' ></i></a>
                                 </div>
                             </div>
 
