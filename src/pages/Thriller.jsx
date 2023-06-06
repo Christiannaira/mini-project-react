@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 function Thriller() {
   const [books, setBooks] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=Thriller&orderBy=newest&maxResults=12&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
+          "https://www.googleapis.com/books/v1/volumes?q=Thriller&orderBy=newest&maxResults=12&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -37,13 +40,19 @@ function Thriller() {
                         title={book.volumeInfo.title}
                         height={"310px"}
                         width={"100%"}
+                        onClick={()=>navigate(`/bookdetails/${book.id}`)}
                       />
                     </div>
+                  </div>
+                  <div>
+                    <button className="">Add to Bookmark</button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+
+
         </div>
       </section>
     </>

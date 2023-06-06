@@ -28,6 +28,7 @@ import ArtAndPhotography from './ArtAndPhotography';
 import Biographies from './Biographies';
 import ComicsAndGraphic from './ComicsAndGraphic';
 import CraftHobbiesHome from './CraftHobbiesHome';
+import BooksDetails from './BooksDetails';
 
 
 
@@ -42,7 +43,7 @@ function Index() {
                         <Route path="/account" element={<Accounts />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/bookmarks" element={<Bookmark />} />
-                        <Route path="/bookmarks" element={<Bookmark />} />
+                        <Route path="/bookdetails/:id" element={<BooksDetails />} />
                         <Route path="/categories" element={<Categories />} />
                     </Route>
                     <Route path='/thriller' element={<Thriller />} />

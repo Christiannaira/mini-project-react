@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router";
+
 
 function Travel() {
   const [books, setBooks] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,6 +42,7 @@ function Travel() {
                         title={book.volumeInfo.title}
                         height={"310px"}
                         width={"100%"}
+                        onClick={()=>navigate(`/bookdetails/${book.id}`)}
                       />
                     </div>
                   </div>
