@@ -7,15 +7,19 @@ function FeaturedBooks() {
   const navigate = useNavigate();
 
   useEffect(() => {
+
     const fetchData = async () => {
       try {
         const response = await axios.get(
+
           "https://www.googleapis.com/books/v1/volumes?q=best-books&orderBy=newest&maxResults=24&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
+
         );
         setBooks(response.data.items);
       } catch (error) {
         console.error("Error fetching books:", error);
       }
+
     };
 
     fetchData();
@@ -26,6 +30,7 @@ function FeaturedBooks() {
       <section className="featured-books" id="featured-books">
         <div className="container featured-books-content">
           <h2>BEST BOOKS</h2>
+
 
           <div className="row mt-3">
             {books.map((book) => (
@@ -45,12 +50,11 @@ function FeaturedBooks() {
                     </div>
                   </div>
 
-                  {/* <div className="text-white featued-book-text text-uppercase">
-                    <h5 className="">{book.volumeInfo.title}</h5>
-                    <h5> Author: {book.volumeInfo.authors}</h5>
-                  </div> */}
                 </div>
+
+
               </div>
+
             ))}
           </div>
         </div>

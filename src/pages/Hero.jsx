@@ -6,15 +6,28 @@ import Twitter from '../assets/twitter.png';
 import Youtube from '../assets/youtube.png';
 import SearchAnimation from '../assets/search-icon.gif'
 import ArrowDownAnimation from '../assets/arrow-down-animation.gif'
+import { useState } from 'react';
 
 function Hero() {
+
+    const [search, setSearch] = useState('');
+
+    const searchText = (text) => {
+        setSearch(text.target.value);
+    }
+
+    const findThis = () => {
+        alert(`${search}`)
+    }
+
     return (
         <>
             <section className="home" id="home">
                 <div className="container home-content">
                     <div className="row  text-center">
                         <div className="col-12">
-                            <h1>Unlock The Universe</h1>
+                            {/* <h1>Unlock The Universe</h1> */}
+                            <h2>{search}</h2>
                         </div>
                         <div className="col-12">
                             <img src={HeroAnimation} alt="" width={'450px'} />
@@ -25,8 +38,8 @@ function Hero() {
                         <div className="col-12 d-flex justify-content-center">
                             <div className="search-bar">
                                 <img src={SearchAnimation} alt="" />
-                                <input type="text" className='form-control d-block' placeholder='search your favorite author, books...' />
-                                <button className='btn btn-dark'>Search</button>
+                                <input type="text" className='form-control d-block' placeholder='search your favorite author, books...' onChange={searchText} />
+                                <button className='btn btn-dark' onClick={findThis}>Search</button>
                             </div>
                         </div>
                     </div>

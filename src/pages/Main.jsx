@@ -7,14 +7,31 @@ import Links from './Links';
 
 function Main() {
 
-
+    const location = useLocation();
 
     return (
 
         <>
 
             <Helmet>
-                <title>eHUB - Hero</title>
+                {
+                    location.pathname === '/' ? (<title>eHUB - Hero</title>) : ''
+                }
+
+                {
+                    location.pathname === '/account' ? (<title>eHUB - Account</title>) : ''
+                }
+
+                {
+                    location.pathname === '/contact' ? (<title>eHUB - Contact</title>) : ''
+                }
+                {
+                    location.pathname === '/bookmarks' ? (<title>eHUB - Bookmarks</title>) : ''
+                }
+                {
+                    location.pathname === '/categories' ? (<title>eHUB - Categories</title>) : ''
+                }
+
             </Helmet>
 
             {/*header section layout*/}

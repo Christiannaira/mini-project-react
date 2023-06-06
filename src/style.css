@@ -53,36 +53,6 @@ nav .navlist {
     color: #fff;
 }
 
-.navbar-dropdown,
-.navbar-dropdown a {
-    color: #222;
-}
-
-nav .navbar-dropbtn {
-    position: relative;
-    background-color: inherit;
-    border: none;
-    outline: none;
-    color: #fff;
-}
-
-nav .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    width: 100%;
-    left: 0;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.navbar-dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.navbar-dropdown:hover .navbar-dropbtn {
-    letter-spacing: 3px;
-}
 
 nav .top-icons a {
     display: inline-flex;
@@ -104,6 +74,11 @@ nav .top-icons .icons:hover {
     border-radius: 30px;
     transform: scale(1.2);
 }
+
+.lightmode {
+    cursor: pointer;
+}
+
 
 section {
     padding: 120px 0;
@@ -147,6 +122,10 @@ section {
     border: none;
 }
 
+.home-content input {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .home-content input::placeholder {
     font-family: 'Open Sans', sans-serif;
 }
@@ -185,6 +164,8 @@ section {
     transform: translateY(-50%);
 }
 
+
+
 .home-content .social-media-icons {
     display: flex;
     justify-content: center;
@@ -221,9 +202,37 @@ section {
 
 
 /*featured book section design*/
+/* 
+
+
+
+.featured-books .featured-book-img {
+    background-color: #222;
+    cursor: pointer;
+   
+}
+
+.featured-books .featured-book-img .inner-block {
+    background-color: #fff;
+}
+
+ */
+
+/*featured details section design*/
+
 .featured-books {
     background: linear-gradient(to bottom, rgb(90, 56, 253), rgba(90, 56, 253, .1));
     padding: 40px 0;
+}
+
+.featured-books .row {
+    margin-top: 3rem;
+}
+
+.featured-img,
+.featured-book-img {
+    background-color: #222;
+    display: inline-block;
 }
 
 .featured-books h2 {
@@ -233,24 +242,54 @@ section {
     text-align: center;
 }
 
-.featured-books .featured-book-img {
-    background-color: #222;
-    cursor: pointer;
-    transition: .3s ease;
-}
-
-.featured-books .featured-book-img .inner-block {
+.featured-img .innerblock,
+.featured-book-img .innerblock {
     background-color: #fff;
 }
 
+.featured-img {
+    cursor: pointer;
+    transition: .3s ease;
+    margin-bottom: 2rem;
+}
 
-.featured-books .featured-book-img:hover {
+.featured-img:hover {
     transform: translateY(-10px);
 }
 
-.featured-books .featured-book-img:hover img {
+.featured-books .featured-img:hover img {
     filter: hue-rotate(90deg);
 }
+
+.book-content {
+    background-color: #5A38FD;
+}
+
+.book h1 {
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
+
+}
+
+.featured-book-text h3 {
+    color: #fff;
+    font-family: 'Antonio', sans-serif;
+}
+
+.featured-book-text h4 {
+    color: #fff;
+    font-family: 'Antonio', sans-serif;
+    font-size: 1rem;
+}
+
+.featured-book-text {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
 
 /*cta2 section design*/
 
@@ -453,14 +492,14 @@ section {
 
 .categories-content a {
     text-decoration: none;
-    font-size: 2rem;
-    transition: .3s ease;
+    font-size: 1.2rem;
+
 
 }
 
 .categories-content a:hover {
     text-decoration: underline;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 }
 
 /*accounts section design*/
@@ -504,6 +543,13 @@ section {
     font-size: 6rem;
     color: #5A38FD;
 }
+
+.main-content img {
+    cursor: pointer;
+
+}
+
+
 
 .accounts-content h3 {
     color: #fff;
