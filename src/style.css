@@ -227,6 +227,13 @@ section {
     filter: hue-rotate(90deg);
 }
 
+/*featured details section design*/
+
+.modal {
+    z-index: 10005;
+}
+
+
 /*cta2 section design*/
 
 .cta2 {
@@ -428,14 +435,14 @@ section {
 
 .categories-content a {
     text-decoration: none;
-    font-size: 2rem;
-    transition: .3s ease;
+    font-size: 1.2rem;
+
 
 }
 
 .categories-content a:hover {
     text-decoration: underline;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 }
 
 /*accounts section design*/

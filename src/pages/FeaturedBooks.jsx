@@ -4,7 +4,7 @@ import FeaturedDetails from "./FeaturedDetails";
 
 function FeaturedBooks() {
   const [books, setBooks] = useState([]);
-  const [selectedBook, setSelectedBook] = useState(null);
+  const [selectedBook, setSelectedBook] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,12 +25,14 @@ function FeaturedBooks() {
   const handleBookClick = (book) => {
     setSelectedBook(book);
   };
-  const handleGoBack = () => {
-    setSelectedBook(null);
-  };
-  if (selectedBook) {
-    return <FeaturedDetails book={selectedBook} goBack={handleGoBack} />;
-  }
+
+  // const handleGoBack = () => {
+  //   setSelectedBook(null);
+  // };
+
+  // if (selectedBook) {
+  //   return <FeaturedDetails book={selectedBook} goBack={handleGoBack} />;
+  // }
 
 
   return (
@@ -50,7 +52,35 @@ function FeaturedBooks() {
 
                   <div className="featured-book-img p-1">
                     <div className="inner-block p-1">
-                      <img src={book.volumeInfo.imageLinks.smallThumbnail} alt={`${book.volumeInfo.title} Book Cover`} onClick={() => handleBookClick(book)} title={book.volumeInfo.title} height={'310px'} width={'100%'} />
+                      <img src={book.volumeInfo.imageLinks.smallThumbnail} alt={`${book.volumeInfo.title} Book Cover`} onClick={() => handleBookClick(book)} title={book.volumeInfo.title} height={'310px'} width={'100%'} data-bs-toggle="modal" data-bs-target="#myModal" />
+                    </div>
+                  </div>
+
+                  {/*modal section layout*/}
+                  <div className="modal" id="myModal">
+                    <div className="modal-dialog modal-xl">
+                      <div className="modal-content">
+
+                        {/*modal header layout*/}
+                        {/* <div className="modal-header">
+                          <h1 className="modal-title">{selectedBook.volumeInfo.title}</h1>
+                          <button className="btn-close" data-bs-dismiss="modal" type=""></button>
+                        </div> */}
+
+                        {/*modal body layout*/}
+                        {/* <div className="modal-body">
+                          <img src={selectedBook.volumeInfo.imageLinks.smallThumbnail} alt="" width={'300px'} />
+                          <h1>{selectedBook.volumeInfo.authors.map(eachA => {
+                            return eachA;
+                          })}</h1>
+                          <h4>{selectedBook.volumeInfo.description}</h4>
+                        </div> */}
+
+                        {/*modal footer layout*/}
+                        <div className="modal-footer">
+
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -58,6 +88,8 @@ function FeaturedBooks() {
                     <h5 className="">{book.volumeInfo.title}</h5>
                     <h5> Author: {book.volumeInfo.authors}</h5>
                   </div> */}
+
+
 
                 </div>
               </div>
