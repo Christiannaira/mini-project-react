@@ -9,6 +9,11 @@ import DarkMode from '../assets/darkmode.png'
 
 function Navbar() {
 
+    const changeColor = () => {
+        const body = document.querySelector('body');
+
+
+    }
 
     return (
         <>
@@ -23,8 +28,8 @@ function Navbar() {
                     <Link to="/account" data-bs-toggle="tooltip" data-bs-placement="top" title="Account" className='icons'><img src={Acccount} alt="login&signin" width={'20px'} /></Link>
                     <Link to="/contact" data-bs-toggle="tooltip" data-bs-placement="top" title="Contact" className='icons'><img src={ContactIcon} alt="contact-icon" width={'20px'} /></Link>
                     <Link to="/bookmarks" data-bs-toggle="tooltip" data-bs-placement="top" title="Bookmark" className='icons'><img src={Bookmark} alt="bookmarks" width={'20px'} /></Link>
-                    <a data-bs-toggle="tooltip" data-bs-placement="top" className='icons lightmode'>
-                        <img src={LightMode} alt="" width={'20px'} /></a>
+                    <a data-bs-toggle="tooltip" data-bs-placement="top" title="dark mode" className='icons lightmode'>
+                        <img src={LightMode} alt="" width={'20px'} onClick={changeColor} /></a>
                 </div>
             </nav>
         </>

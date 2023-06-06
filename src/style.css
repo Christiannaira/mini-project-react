@@ -122,6 +122,10 @@ section {
     border: none;
 }
 
+.home-content input {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .home-content input::placeholder {
     font-family: 'Open Sans', sans-serif;
 }
@@ -160,6 +164,8 @@ section {
     transform: translateY(-50%);
 }
 
+
+
 .home-content .social-media-icons {
     display: flex;
     justify-content: center;
@@ -196,9 +202,37 @@ section {
 
 
 /*featured book section design*/
+/* 
+
+
+
+.featured-books .featured-book-img {
+    background-color: #222;
+    cursor: pointer;
+   
+}
+
+.featured-books .featured-book-img .inner-block {
+    background-color: #fff;
+}
+
+ */
+
+/*featured details section design*/
+
 .featured-books {
     background: linear-gradient(to bottom, rgb(90, 56, 253), rgba(90, 56, 253, .1));
     padding: 40px 0;
+}
+
+.featured-books .row {
+    margin-top: 3rem;
+}
+
+.featured-img,
+.featured-book-img {
+    background-color: #222;
+    display: inline-block;
 }
 
 .featured-books h2 {
@@ -208,30 +242,53 @@ section {
     text-align: center;
 }
 
-.featured-books .featured-book-img {
-    background-color: #222;
-    cursor: pointer;
-    transition: .3s ease;
-}
-
-.featured-books .featured-book-img .inner-block {
+.featured-img .innerblock,
+.featured-book-img .innerblock {
     background-color: #fff;
 }
 
+.featured-img {
+    cursor: pointer;
+    transition: .3s ease;
+    margin-bottom: 2rem;
+}
 
-.featured-books .featured-book-img:hover {
+.featured-img:hover {
     transform: translateY(-10px);
 }
 
-.featured-books .featured-book-img:hover img {
+.featured-books .featured-img:hover img {
     filter: hue-rotate(90deg);
 }
 
-/*featured details section design*/
-
-.modal {
-    z-index: 10005;
+.book-content {
+    background-color: #5A38FD;
 }
+
+.book h1 {
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
+
+}
+
+.featured-book-text h3 {
+    color: #fff;
+    font-family: 'Antonio', sans-serif;
+}
+
+.featured-book-text h4 {
+    color: #fff;
+    font-family: 'Antonio', sans-serif;
+    font-size: 1rem;
+}
+
+.featured-book-text {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
 
 
 /*cta2 section design*/
