@@ -1,41 +1,40 @@
 import React from "react";
 
 const FeaturedDetails = ({ book, goBack }) => {
+
   return (
     <>
       {/*books section layout*/}
-      <section className="book">
+      <div className="book">
 
-        <div className="book-content container border p-5">
+        <div className="book-content p-5">
 
-          <div className="text-white">
+          <div className="d-md-flex">
 
-            <h3>{book.volumeInfo.title}</h3>
-
-            <div className="featured-book-img p-1">
-              <img src={book.volumeInfo.imageLinks.smallThumbnail} alt={`${book.volumeInfo.title} Book Cover`} title={`${book.volumeInfo.title} Book Cover`} width={'200px'} />
+            <div className="featured-book-img p-1 me-5">
+              <div className="innerblock p-1 ">
+                <img src={book.volumeInfo.imageLinks.smallThumbnail} alt={`${book.volumeInfo.title} Book Cover`} title={`${book.volumeInfo.title} Book Cover`} width={'300px'} />
+              </div>
             </div>
 
+            <div className="featured-book-text mt-3">
+              <h1>{book.volumeInfo.title}</h1>
+              {book.volumeInfo.authors && (
+                <h3>Author: {book.volumeInfo.authors.join(", ")}</h3>
+              )}
 
-
-            <h4>Author:  {book.volumeInfo.authors}</h4>
-
-            <h4>Published Date:</h4> {book.volumeInfo.publishedDate}
-            <h4>Description:</h4> {book.volumeInfo.description}
-
+              <h4>Published Date: {book.volumeInfo.publishedDate}</h4>
+              <p>Description: {book.volumeInfo.description}</p>
+            </div>
           </div>
 
-          <button className="btn btn-light" onClick={goBack}>Go Back</button>
-          <div class="container mt-3">
-            {/* 
-            <button type="button" data-bs-toggle="modal" className="btn btn-dark" data-bs-target="#myModal">Open Modal</button> */}
 
+          <button id="btn" className="btn btn-light" onClick={goBack}>Go Back</button>
 
-          </div>
 
         </div>
 
-      </section>
+      </div>
 
     </>
   );
