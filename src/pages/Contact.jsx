@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ContactAnimation from '../assets/contact-animation.gif'
 import ContactAbstract from '../assets/contact-abstract.png'
+import Ratings from "./Ratings";
 
 function Contact() {
     return (
@@ -54,6 +55,7 @@ function Contact() {
 
                 </div>
             </section>
+            <Ratings />
 
         </>
     )

@@ -46,7 +46,6 @@ function Main() {
 
             {/*footer section layout*/}
             <footer>
-                <Ratings />
                 <Links />
             </footer>
 

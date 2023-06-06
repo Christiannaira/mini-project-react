@@ -1,5 +1,6 @@
 import AccountAnimation from '../assets/account-animation.gif'
 import { Link } from 'react-router-dom';
+import Ratings from './Ratings';
 
 function Accounts() {
     return (
@@ -48,6 +49,7 @@ function Accounts() {
                     </div>
                 </div>
             </section>
+            <Ratings />
 
         </>
     )

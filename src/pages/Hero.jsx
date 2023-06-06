@@ -11,16 +11,15 @@ import Search from './Search';
 
 function Hero() {
 
-    const [search, setSearch] = useState('John Maxwell');
+    const [search, setSearch] = useState('');
 
     const searchBook = () => {
 
-        setSearch(document.querySelector("#searchText").value);
-
-
-
-
-
+        if (document.querySelector("#searchText").value) {
+            setSearch(document.querySelector("#searchText").value);
+        } else {
+            alert('please insert something');
+        }
 
 
     }
