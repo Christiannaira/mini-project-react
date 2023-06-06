@@ -3,7 +3,9 @@ function Bookmark() {
         <>
             <section className="bookmarks">
                 <div className="container bookmarks-content">
-                    <h1>BOOKMARK</h1>
+                    <div className="main-content">
+                        <h1>BOOKMARK</h1>
+                    </div>
                 </div>
             </section>
 

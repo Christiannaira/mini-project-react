@@ -10,7 +10,7 @@ function Accounts() {
                     <Link to='/'>Home</Link><i class='bx bx-chevron-right'></i> Account <i class='bx bx-chevron-right'></i>
                 </div>
                 <div className="container accounts-content">
-                    <div className="main-content text-center">
+                    <div className="main-content text-center d-md-flex align-items-center justify-content-center">
                         <h1>YOUR ACCOUNT</h1>
                         <img src={AccountAnimation} alt="account-animation" width={'300px'} />
                     </div>
