@@ -17,7 +17,12 @@ const SignIn = () => {
             console.log(userCredential)
         })
             .catch((error) => {
-                console.log(error);
+                if( password !== setPassword(e.target.value) ) {
+                    alert(`Password is incorrect!`);
+                }
+                 else {
+                    alert(`Email and Password not found!`)
+                }
             });
     };
 
@@ -34,7 +39,7 @@ const SignIn = () => {
                                     <input type="checkbox" id='rememberMe' /> <span>Remember me</span>
                                 </label>
                                 <div className="account-btn">
-                                    <button type="submit" className='btn btn-success rounded'>Sign In</button>
+                                    <button type="submit" className='btn btn-success'>Sign In</button>
                                     
                                 </div>
                                 <div className='mt-2'>

@@ -514,7 +514,25 @@ section {
     display: block;
 }
 
-.accounts-content input[type='text'] {
+.accounts-content input[type='name'] {
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 10px 0;
+    padding: 14px;
+    box-shadow: 0px 8px 16px 0 rgba(90, 56, 253, .5);
+}
+
+.accounts-content input[type='email'] {
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 10px 0;
+    padding: 14px;
+    box-shadow: 0px 8px 16px 0 rgba(90, 56, 253, .5);
+}
+
+.accounts-content input[type='password'] {
     outline: none;
     box-shadow: none;
     border-radius: 0;

@@ -15,12 +15,13 @@ const SignUp = () => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            console.log(userCredential)
+            console.log(userCredential);
         })
             .catch((error) => {
                 console.log(error);
             });
     };
+
 
     return(
         <>
@@ -31,12 +32,12 @@ const SignUp = () => {
                     value={email} onChange={(e) => setEmail(e.target.value)} required></input>
                     <input type="password" placeholder="Password"  className='form-control' 
                     value={password} onChange={(e) => setPassword(e.target.value)} required></input>
-                    <input type="password" placeholder="Confirm Password"  className='form-control' 
-                    value={password} onChange={(e) => setPassword(e.target.value)} required></input>
+                    
                         <label className='acceptTC' htmlFor="accept">
                                 <input type="checkbox" id="accept" /> <span>Accept <a >Terms & Conditions</a></span>
                         </label>
-                        <button type="submit" className='btn btn-success rounded'>Sign Up</button>
+                        <button type="submit" className='btn btn-success'>Sign Up</button>
+                        
             </form>
             
         </>
