@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 
 function Business() {
   const [books, setBooks] = useState([]);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=Business&orderBy=newest&maxResults=12&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
+          "https://www.googleapis.com/books/v1/volumes?q=Business&orderBy=newest&maxResults=12&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -39,6 +42,7 @@ function Business() {
                         title={book.volumeInfo.title}
                         height={"310px"}
                         width={"100%"}
+                        onClick={()=>navigate(`/bookdetails/${book.id}`)}
                       />
                     </div>
                   </div>

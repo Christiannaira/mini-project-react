@@ -19,7 +19,7 @@ function Accounts() {
                             <h3>Sign In</h3>
                             <form action="">
                                 <input type="text" placeholder='Username' className='form-control' />
-                                <input type="text" placeholder='Password' className='form-control' />
+                                <input type="password" placeholder='Password' className='form-control' />
                                 <span>Forgot Password?</span>
                                 <label className='rememberMe' htmlFor='rememberMe'>
                                     <input type="checkbox" id='rememberMe' /> <span>Remember me</span>
@@ -34,11 +34,11 @@ function Accounts() {
                         </div>
                         <div className="col-md-6">
                             <h3>Sign Up</h3>
-                            <form action="">
+                            <form action="#">
                                 <input type="text" placeholder='Email' className='form-control' />
                                 <input type="text" placeholder='Username' className='form-control' />
-                                <input type="text" placeholder='Password' className='form-control' />
-                                <input type="text" placeholder='Confirm Password' className='form-control' />
+                                <input type="password" placeholder='Password' className='form-control' />
+                                <input type="password" placeholder='Confirm Password' className='form-control' />
                                 <label className='acceptTC' htmlFor="accept">
                                     <input type="checkbox" id="accept" /> <span>Accept <a >Terms & Conditions</a></span>
                                 </label>
