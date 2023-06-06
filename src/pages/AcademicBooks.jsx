@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import AcademicDetails from "./AcademicDetails"
+import FeaturedDetails from "./FeaturedDetails";
 
-const AcademicBooks = () => {
+function Academics() {
   const [books, setBooks] = useState([]);
   const [selectedBook, setSelectedBook] = useState(null);
 
@@ -10,7 +10,7 @@ const AcademicBooks = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=academic&orderBy=newest&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
+          "https://www.googleapis.com/books/v1/volumes?q=best-books&orderBy=newest&maxResults=24&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -19,7 +19,8 @@ const AcademicBooks = () => {
     };
 
     fetchData();
-  }, [AcademicBooks]);
+  }, [FeaturedBooks]);
+
 
   const handleBookClick = (book) => {
     setSelectedBook(book);
@@ -28,37 +29,45 @@ const AcademicBooks = () => {
     setSelectedBook(null);
   };
   if (selectedBook) {
-    return <AcademicDetails book={selectedBook} goBack={handleGoBack} />;
+    return <FeaturedDetails book={selectedBook} goBack={handleGoBack} />;
   }
 
+
   return (
+    <>
+      <section className="featured-books" id="featured-books">
+        <div className="container featured-books-content">
 
+          <h2>ACADEMIC BOOKS</h2>
 
-    <div className="row">
-      {books.map((book) => (
-        <div key={book.id} className="book col-lg-4 col-md-6 col-sm-12">
-          <div className="mb-3">
-            <div className="text-white">
-              <h5 className="">{book.volumeInfo.title}</h5>
-              {book.volumeInfo.authors && (
-                <p className="">Author: {book.volumeInfo.authors.join(", ")}</p>
-              )}
-            </div>
-            {book.volumeInfo.imageLinks && (
-              <img
-                className="img-thumbnail fluid"
-                src={book.volumeInfo.imageLinks.thumbnail}
-                alt="Book Cover"
-                onClick={() => handleBookClick(book)}
-              />
-            )}
+          <div className="row mt-3">
+
+            {books.map((book) => (
+
+              <div className="book col-lg-2 text-center">
+
+                <div className="mb-3">
+
+                  <div className="featured-book-img p-1">
+                    <div className="inner-block p-1">
+                      <img src={book.volumeInfo.imageLinks.smallThumbnail} alt={`${book.volumeInfo.title} Book Cover`} onClick={() => handleBookClick(book)} title={book.volumeInfo.title} height={'310px'} width={'100%'} />
+                    </div>
+                  </div>
+
+                  {/* <div className="text-white featued-book-text text-uppercase">
+                    <h5 className="">{book.volumeInfo.title}</h5>
+                    <h5> Author: {book.volumeInfo.authors}</h5>
+                  </div> */}
+
+                </div>
+              </div>
+            ))}
           </div>
+
         </div>
-      ))}
-    </div>
-
-
+      </section>
+    </>
   );
-};
+}
 
-export default AcademicBooks;
+export default Academics;
