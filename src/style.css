@@ -139,10 +139,9 @@ section {
     right: 0;
     top: 0;
     height: 100%;
-    border-radius: 0;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    width: 280px;
+    border-radius: 30px;
+
+    width: 230px;
     background-color: #5A38FD;
     color: #fff;
     border: none;
@@ -153,7 +152,6 @@ section {
 
 .search-bar .btn:hover {
     background-color: #222;
-    width: 400px;
 }
 
 .search-bar img {
@@ -200,24 +198,6 @@ section {
     letter-spacing: 5px;
 }
 
-
-/*featured book section design*/
-/* 
-
-
-
-.featured-books .featured-book-img {
-    background-color: #222;
-    cursor: pointer;
-   
-}
-
-.featured-books .featured-book-img .inner-block {
-    background-color: #fff;
-}
-
- */
-
 /*featured details section design*/
 
 .featured-books {
@@ -247,46 +227,52 @@ section {
     background-color: #fff;
 }
 
-.featured-img {
+.featured-book-img {
     cursor: pointer;
     transition: .3s ease;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
-.featured-img:hover {
+.featured-book-img:hover {
     transform: translateY(-10px);
 }
 
-.featured-books .featured-img:hover img {
+.featured-book-img:hover img {
     filter: hue-rotate(90deg);
 }
 
-.book-content {
-    background-color: #5A38FD;
+
+/*booksdetails section design*/
+
+.book-details {
+    height: 100vh;
+    overflow-x: scroll;
 }
 
-.book h1 {
-    color: #fff;
-    font-family: 'Anton', sans-serif;
+.books-img {
+    display: inline-block;
+    height: 100%;
+    background-color: #222;
+}
+
+
+.books-img .innerblock {
+    background-color: #fff;
+}
+
+
+.books-txt h1 {
     font-size: 5rem;
-
+    font-family: 'Anton', sans-serif;
+    color: yellow;
 }
 
-.featured-book-text h3 {
-    color: #fff;
-    font-family: 'Antonio', sans-serif;
-}
-
-.featured-book-text h4 {
-    color: #fff;
-    font-family: 'Antonio', sans-serif;
+.books-txt .author,
+.books-txt .publishDate,
+.books-txt .genre,
+.books-txt .summary {
     font-size: 1rem;
-}
-
-.featured-book-text {
-    color: #fff;
     font-family: 'Open Sans', sans-serif;
-
 }
 
 
@@ -528,6 +514,32 @@ section {
 .breadcrumb i {
     font-size: 1.2rem;
 }
+
+.book-breadcrumb {
+    left: 0;
+    top: 0px;
+    position: fixed;
+    z-index: 1000;
+    background-color: #5A38FD;
+    width: 100%;
+    color: #ddd;
+    font-family: 'Antonio', sans-serif;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    user-select: none;
+}
+
+.book-breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.book-breadcrumb i {
+    font-size: 1.2rem;
+}
+
 
 .accounts {
     padding: 100px 0 50px;
@@ -850,4 +862,63 @@ section {
 .bookmarks h2 {
     font-family: 'Anton', sans-serif;
     color: #222;
+}
+
+/*pagination section*/
+
+.pagination .page-link {
+    background-color: #222;
+    padding: 10px 3rem;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: .3s ease;
+}
+
+.pagination .page-link:hover {
+    background-color: #5A38FD;
+}
+
+/*responsiveness*/
+
+@media screen and (max-width: 984px) {
+
+    /*hero section design*/
+
+    .home {
+        padding: 100px 0 20px;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content #home-img img {
+        width: 400px;
+    }
+
+    .search-bar .btn {
+        width: 200px;
+    }
+
+    /*cta section design*/
+
+    .cta h2 {
+        font-size: 5rem;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    /*hero section design*/
+
+    .search-bar {
+        width: 100%;
+    }
+
+    /* #featured-books,
+    #cta {
+        display: none;
+    } */
+
 }
