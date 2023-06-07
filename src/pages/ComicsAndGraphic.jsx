@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
+
 
 function ComicGraphic() {
   const [books, setBooks] = useState([]);
@@ -24,6 +26,11 @@ function ComicGraphic() {
 
   return (
     <>
+     {/*breadcrumb section layout*/}
+     <div className='book-breadcrumb'>
+        <Link to='/'>Home</Link><i className='bx bx-chevron-right'></i> <Link to="/categories">Categories</Link> <i className='bx bx-chevron-right'></i> Comics and Graphic Novels
+      </div>
+
       <section className="featured-books" id="featured-books">
         <div className="container featured-books-content">
           <h2>Comics & Graphic Novels</h2>
@@ -37,13 +44,15 @@ function ComicGraphic() {
                       <img
                         src={book.volumeInfo.imageLinks.smallThumbnail}
                         alt={`${book.volumeInfo.title} Book Cover`}
-                       
                         title={book.volumeInfo.title}
                         height={"310px"}
                         width={"100%"}
                         onClick={()=>navigate(`/bookdetails/${book.id}`)}
                       />
                     </div>
+                  </div>
+                  <div>
+                    <button className="">Add to Bookmark</button>
                   </div>
                 </div>
               </div>

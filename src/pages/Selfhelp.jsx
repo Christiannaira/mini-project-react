@@ -50,6 +50,9 @@ function Selfhelp() {
                       />
                     </div>
                   </div>
+                  <div>
+                    <button className="">Add to Bookmark</button>
+                  </div>
                 </div>
               </div>
             ))}

@@ -38,7 +38,7 @@ function Search({ keyword }) {
                             <div className="featured-book-img p-1">
                                 <div className="innerblock p-1">
                                     <img
-                                        src={book.volumeInfo.imageLinks.smallThumbnail}
+                                        src={book.volumeInfo?.imageLinks?.smallThumbnail}
                                         alt={`${book.volumeInfo.title} Book Cover`}
 
                                         title={book.volumeInfo.title}

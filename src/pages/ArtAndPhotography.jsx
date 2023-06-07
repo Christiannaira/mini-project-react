@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 
 function ArtAndPhotography() {
@@ -25,6 +26,11 @@ function ArtAndPhotography() {
 
   return (
     <>
+     {/*breadcrumb section layout*/}
+     <div className='book-breadcrumb'>
+        <Link to='/'>Home</Link><i className='bx bx-chevron-right'></i> <Link to="/categories">Categories</Link> <i className='bx bx-chevron-right'></i> Computer & Technology
+      </div>
+
       <section className="featured-books" id="featured-books">
         <div className="container featured-books-content">
           <h2>Art & Photography</h2>
@@ -45,6 +51,9 @@ function ArtAndPhotography() {
                         onClick={()=>navigate(`/bookdetails/${book.id}`)}
                       />
                     </div>
+                  </div>
+                  <div>
+                    <button className="">Add to Bookmark</button>
                   </div>
                 </div>
               </div>
