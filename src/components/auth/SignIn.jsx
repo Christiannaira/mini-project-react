@@ -8,7 +8,7 @@ const SignIn = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    
+   
 
     const signIn = (e) => {
         e.preventDefault();
@@ -17,13 +17,18 @@ const SignIn = () => {
             console.log(userCredential)
         })
             .catch((error) => {
-                if( password !== setPassword(e.target.value) ) {
-                    alert(`Password is incorrect!`);
-                }
-                 else {
-                    alert(`Email and Password not found!`)
-                }
+                if( password !== setPassword(e.target.value)) {
+                    alert(`password is incorrect!`);
+                } 
+               
+            })
+            .catch((error) => {
+                if( password !== setPassword(e.target.value) || email !== setEmail(e.target.value)) {
+                    alert(`user not found!`);
+                } 
+               
             });
+
     };
 
     return(
@@ -39,7 +44,7 @@ const SignIn = () => {
                                     <input type="checkbox" id='rememberMe' /> <span>Remember me</span>
                                 </label>
                                 <div className="account-btn">
-                                    <button type="submit" className='btn btn-success'>Sign In</button>
+                                    <button type="submit" className='btn btn-success' >Sign In</button>
                                     
                                 </div>
                                 <div className='mt-2'>
