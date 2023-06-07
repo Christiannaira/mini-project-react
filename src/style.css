@@ -21,6 +21,11 @@ body {
     background-color: #4784f7;
 }
 
+body.change {
+    background-color: #222;
+}
+
+
 /*header section design*/
 
 header {
@@ -32,6 +37,7 @@ header {
     color: #fff;
     font-family: 'Antonio', sans-serif;
     z-index: 10001;
+    transition: .45s ease;
 }
 
 nav {
@@ -250,6 +256,7 @@ section {
 }
 
 .books-img {
+
     display: inline-block;
     height: 100%;
     background-color: #222;
@@ -267,12 +274,36 @@ section {
     color: yellow;
 }
 
-.books-txt .author,
-.books-txt .publishDate,
-.books-txt .genre,
-.books-txt .summary {
+.books-img .author,
+.books-img .publishDate,
+.books-img .genre,
+.books-img .summary {
     font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
+}
+
+.books-txt strong {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.book-details .btn-dark {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    background-color: #5A38FD;
+}
+
+.book-details .btn-dark i {
+    font-size: 1.1rem;
+}
+
+.book-details .btn-dark:hover {
+    background-color: #fff;
+}
+
+.book-details .btn-dark:hover i {
+    color: #5A38FD;
 }
 
 
@@ -350,6 +381,11 @@ section {
     border-radius: 30px;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+}
+
 @media (max-width: 760px) {
     .swiper-button-next {
         right: 20px;
@@ -424,6 +460,15 @@ section {
     transition: .3s ease;
 }
 
+.swiper-slide .reactions .bx-heart {
+    color: red;
+}
+
+.swiper-slide .reactions .bx-like,
+.swiper-slide .reactions .bx-dislike {
+    color: dodgerblue;
+}
+
 .swiper-slide .reactions a:hover {
     transform: scale(1.1);
     cursor: pointer;
@@ -492,7 +537,7 @@ section {
 
 .breadcrumb {
     left: 0;
-    top: 70px;
+    top: 0;
     position: fixed;
     z-index: 1000;
     background-color: #5A38FD;
@@ -550,11 +595,13 @@ section {
     height: 100%;
 }
 
+
 .main-content h1 {
     font-family: 'Anton', sans-serif;
     font-size: 6rem;
     color: #5A38FD;
 }
+
 
 .main-content img {
     cursor: pointer;
@@ -686,6 +733,8 @@ section {
     height: 100%;
 }
 
+
+
 .contact .contact-row {
     position: relative;
 }
@@ -815,9 +864,28 @@ section {
         width: 100%;
     }
 
-    /* #featured-books,
-    #cta {
-        display: none;
-    } */
+    /*navbar section design*/
 
+    nav .navbar-logo {
+        display: none;
+    }
+
+    /*ratings section design*/
+
+    .ratings {
+        height: 90vh;
+    }
+
+}
+
+/*not found section design*/
+
+.notFound {
+    height: 95vh;
+}
+
+.notFound h3 {
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
 }
