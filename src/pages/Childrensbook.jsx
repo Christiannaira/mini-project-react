@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 import { addToBookmark } from "./bookmarkService";
 import { Link } from "react-router-dom";
-
+import Bookmark from '../assets/bookmarkViolet.png'
 
 function Childrensbook() {
   const [books, setBooks] = useState([]);
@@ -16,7 +16,7 @@ function Childrensbook() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=Childrensbook&orderBy=newest&maxResults=12&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
+          "https://www.googleapis.com/books/v1/volumes?q=Childrensbook&orderBy=newest&maxResults=30&key=AIzaSyC13_LMY76gJyYVCy9BxYtEUvHlHLUYXY4"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -49,11 +49,11 @@ function Childrensbook() {
                         width={"100%"}
                         onClick={() => navigate(`/bookdetails/${book.id}`)} />
                     </div>
+                    <img src={Bookmark} alt="" className="bookmark-icon"
+                      onClick={() => handleBookmark(book)} />
                   </div>
-                  <button
-                    className="bookmark-icon"
-                    onClick={() => handleBookmark(book)}
-                  >Add to Bookmark</button>
+
+
                 </div>
               </div>
             ))}

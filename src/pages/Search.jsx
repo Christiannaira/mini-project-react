@@ -16,7 +16,7 @@ function Search({ keyword }) {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
-                    `https://www.googleapis.com/books/v1/volumes?q=${keyword}&orderBy=newest&startIndex=${startIndex}&maxResults=${maxResults}&key=AIzaSyDPQiYZHWTItrRbHt1NdY-S92y9gcBvAPw`
+                    `https://www.googleapis.com/books/v1/volumes?q=${keyword}&orderBy=newest&startIndex=${startIndex}&maxResults=${maxResults}&key=AIzaSyC13_LMY76gJyYVCy9BxYtEUvHlHLUYXY4`
                 );
                 setBooks(response.data.items);
             } catch (error) {

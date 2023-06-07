@@ -234,9 +234,22 @@ section {
 }
 
 .featured-book-img {
+    position: relative;
     cursor: pointer;
     transition: .3s ease;
     margin-bottom: 1rem;
+}
+
+.featured-book-img .bookmark-icon {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    transition: .3s ease;
+}
+
+.featured-book-img .bookmark-icon:hover {
+    transform: scale(1.3);
 }
 
 .featured-book-img:hover {
@@ -808,9 +821,9 @@ section {
     background-position: center;
     background-size: 10%;
     background-color: #fff;
-    height: 100%;
+    height: 95vh;
 }
-  
+
 
 .bookmarks input {
     padding: 10px 3rem;
@@ -894,7 +907,7 @@ section {
 }
 
 .bookmarks #bmButton:hover {
-    background-color:#5A38FD;
+    background-color: #5A38FD;
     height: 40px;
 }
 

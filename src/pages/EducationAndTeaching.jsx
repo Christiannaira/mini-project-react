@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
+import Bookmark from '../assets/bookmarkViolet.png'
 
 function Education() {
   const [books, setBooks] = useState([]);
@@ -12,7 +12,7 @@ function Education() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=Education&Teaching&orderBy=newest&maxResults=30&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
+          "https://www.googleapis.com/books/v1/volumes?q=Education&Teaching&orderBy=newest&maxResults=30&key=AIzaSyC13_LMY76gJyYVCy9BxYtEUvHlHLUYXY4"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -48,10 +48,10 @@ function Education() {
                         onClick={() => navigate(`/bookdetails/${book.id}`)}
                       />
                     </div>
+                    <img src={Bookmark} alt="" className="bookmark-icon"
+                      onClick={() => handleBookmark(book)} />
                   </div>
-                  <div>
-                    <button className="">Add to Bookmark</button>
-                  </div>
+
                 </div>
               </div>
             ))}
