@@ -12,7 +12,7 @@ function FeaturedBooks() {
       try {
         const response = await axios.get(
 
-          "https://www.googleapis.com/books/v1/volumes?q=best-books&orderBy=newest&maxResults=24&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
+          "https://www.googleapis.com/books/v1/volumes?q=best-books&orderBy=newest&maxResults=24&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE "
 
         );
         setBooks(response.data.items);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FiEye, FiTrash } from 'react-icons/fi';
+
 
 const Bookmark = () => {
   const [books, setBooks] = useState([]);
@@ -108,10 +108,10 @@ const Bookmark = () => {
                     <div className="card-body">
                       <br></br>
                       {isBookmarked(book.id) ? (
-                        <button 
-                        className="btn btn-secondary" 
-                        id="clrButton"
-                        disabled
+                        <button
+                          className="btn btn-secondary"
+                          id="clrButton"
+                          disabled
                         >Bookmarked
                         </button>
                       ) : (
