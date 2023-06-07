@@ -14,32 +14,32 @@ const SignUp = () => {
     const signUp = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            console.log(userCredential);
-        })
+            .then((userCredential) => {
+                console.log(userCredential);
+            })
             .catch((error) => {
                 console.log(error);
             });
     };
 
 
-    return(
+    return (
         <>
             <form onSubmit={signUp}>
-                    <input type="name" placeholder="Username" className='form-control' 
+                <input type="name" placeholder="Username" className='form-control'
                     value={user} onChange={(e) => setUser(e.target.value)} required></input>
-                    <input type="email" placeholder="Email" className='form-control' 
+                <input type="email" placeholder="Email" className='form-control'
                     value={email} onChange={(e) => setEmail(e.target.value)} required></input>
-                    <input type="password" placeholder="Password"  className='form-control' 
+                <input type="password" placeholder="Password" className='form-control'
                     value={password} onChange={(e) => setPassword(e.target.value)} required></input>
-                    
-                        <label className='acceptTC' htmlFor="accept">
-                                <input type="checkbox" id="accept" /> <span>Accept <a >Terms & Conditions</a></span>
-                        </label>
-                        <button type="submit" className='btn btn-success'>Sign Up</button>
-                        
+
+                <label className='acceptTC' htmlFor="accept">
+                    <input type="checkbox" id="accept" /> <span>Accept <a >Terms & Conditions</a></span>
+                </label>
+                <button type="submit" className='btn btn-success'>Sign Up</button>
+
             </form>
-            
+
         </>
     )
 }

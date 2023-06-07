@@ -26,7 +26,7 @@ function ComicGraphic() {
     <>
       <section className="featured-books" id="featured-books">
         <div className="container featured-books-content">
-          <h2>Comcis & Graphic Novels</h2>
+          <h2>Comics & Graphic Novels</h2>
 
           <div className="row mt-3">
             {books.map((book) => (

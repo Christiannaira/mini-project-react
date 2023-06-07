@@ -2,7 +2,6 @@ import Hero from './Hero';
 import Cta from './Cta';
 import FeaturedBooks from './FeaturedBooks';
 import Cta2 from './CtaTwo';
-import Books from './Books';
 import Ratings from './Ratings';
 
 
@@ -13,7 +12,7 @@ function MainPage() {
             <Cta />
             <FeaturedBooks />
             <Cta2 />
-            {/* <Books /> */}
+
         </>
     )
 }
