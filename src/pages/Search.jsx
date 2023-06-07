@@ -76,14 +76,22 @@ function Search({ keyword }) {
                     }}><a class="page-link" href="javascript:void(0);">4</a></li>
 
                     <li class="page-item" onClick={() => {
-                        setStartIndex(48);
+                        setStartIndex(49);
                         setMaxResults(12);
                     }}><a class="page-link" href="javascript:void(0);">5</a></li>
 
                     <li class="page-item" onClick={() => {
-                        setStartIndex(60);
+                        setStartIndex(61);
                         setMaxResults(12);
                     }}><a class="page-link" href="javascript:void(0);">6</a></li>
+                    <li class="page-item" onClick={() => {
+                        setStartIndex(73);
+                        setMaxResults(12);
+                    }}><a class="page-link" href="javascript:void(0);">7</a></li>
+                    <li class="page-item" onClick={() => {
+                        setStartIndex(85);
+                        setMaxResults(12);
+                    }}><a class="page-link" href="javascript:void(0);">8</a></li>
 
 
                 </ul>
