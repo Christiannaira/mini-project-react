@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router";
+
 
 function Search({ keyword }) {
 
 
     const [books, setBooks] = useState([]);
+    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -37,7 +40,7 @@ function Search({ keyword }) {
                                         className=""
                                         src={book.volumeInfo.imageLinks.smallThumbnail}
                                         alt="Book Cover"
-                                        onClick={() => handleBookClick(book)} height={'300px'} width={'100%'}
+                                        onClick={() => navigate(`/bookdetails/${book.id}`)} height={'300px'} width={'100%'}
                                     />
                                 )}
                             </div>
