@@ -46,6 +46,8 @@ function Index() {
                         <Route path="/bookdetails/:id" element={<BooksDetails />} />
                         <Route path="/categories" element={<Categories />} />
                     </Route>
+
+                    {/*categories links*/}
                     <Route path='/thriller' element={<Thriller />} />
                     <Route path='/romance' element={<Romance />} />
                     <Route path='/business' element={<Business />} />
@@ -68,7 +70,10 @@ function Index() {
                     <Route path='/biographies & memoirs' element={<Biographies />} />
                     <Route path='/comics & graphicnovels' element={<ComicsAndGraphic />} />
                     <Route path='/crafthobbies & home' element={<CraftHobbiesHome />} />
-                    
+
+                    {/*website navigation*/}
+
+
 
                 </Routes>
             </BrowserRouter>

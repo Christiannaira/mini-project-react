@@ -1,8 +1,10 @@
+import { useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Navbar from './Navbar'
 import Ratings from './Ratings';
 import Links from './Links';
+
 
 
 function Main() {
