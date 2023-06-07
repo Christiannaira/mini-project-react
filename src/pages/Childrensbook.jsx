@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { addToBookmark } from "./bookmarkService";
+import { Link } from "react-router-dom";
 
 
 function Childrensbook() {
@@ -28,9 +29,12 @@ function Childrensbook() {
 
   return (
     <>
+      <div className='book-breadcrumb'>
+        <Link to='/'>Home</Link><i className='bx bx-chevron-right'></i> <Link to="/categories">Categories</Link> <i className='bx bx-chevron-right'></i> Children's Books
+      </div>
       <section className="featured-books" id="featured-books">
         <div className="container featured-books-content">
-          <h2>Children's Book</h2>
+          <h2>Children's Books</h2>
 
           <div className="row mt-3">
             {books.map((book) => (
@@ -38,7 +42,7 @@ function Childrensbook() {
                 <div className="mb-3">
                   <div className="featured-book-img p-1">
                     <div className="innerblock p-1">
-                      <img src={book.volumeInfo.imageLinks.smallThumbnail}
+                      <img src={book.volumeInfo?.imageLinks?.smallThumbnail}
                         alt={`${book.volumeInfo.title} Book Cover`}
                         title={book.volumeInfo.title}
                         height={"310px"}

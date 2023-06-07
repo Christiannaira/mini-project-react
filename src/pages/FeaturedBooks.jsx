@@ -5,17 +5,21 @@ import { useNavigate } from "react-router";
 function FeaturedBooks() {
   const [books, setBooks] = useState([]);
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
 
     const fetchData = async () => {
       try {
+        setIsLoading(true);
         const response = await axios.get(
 
-          "https://www.googleapis.com/books/v1/volumes?q=best-books&orderBy=newest&maxResults=24&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
+          "https://www.googleapis.com/books/v1/volumes?q=best-books&orderBy=newest&maxResults=24&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
+
 
         );
         setBooks(response.data.items);
+
       } catch (error) {
         console.error("Error fetching books:", error);
       }

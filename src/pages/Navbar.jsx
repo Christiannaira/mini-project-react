@@ -13,6 +13,8 @@ function Navbar() {
         const body = document.querySelector('body');
 
 
+        body.classList.toggle("change");
+
     }
 
     return (
