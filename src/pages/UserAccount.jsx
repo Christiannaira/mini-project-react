@@ -1,4 +1,4 @@
-function Literature() {
+function UserAccount() {
     return (
         <>
             asdasd
@@ -6,4 +6,4 @@ function Literature() {
     )
 }
 
-export default Literature
+export default UserAccount;
