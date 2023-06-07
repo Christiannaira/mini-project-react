@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import AuthDetails from "../components/auth/AuthDetails";
-
-
-function Bookmark() {
-    return (
-        <>
-            <section className="bookmarks">
-                <div className="container bookmarks-content">
-                    <div className="main-content">
-                        <h1>BOOKMARK</h1>
-
-                        <AuthDetails />
-                            
-=======
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -110,7 +95,7 @@ const Bookmark = () => {
                       ) : (
                         <button className="btn btn-primary" onClick={() => handleBookmark(book)}>Bookmark</button>
                       )}
->>>>>>> dc4a20430ee9ac89495da5f295a42a84aaee79d2
+
                     </div>
                   </div>
                 </div>

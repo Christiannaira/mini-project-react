@@ -14,17 +14,17 @@ const SignUp = () => {
     const signUp = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
-<<<<<<< HEAD
+
         .then((userCredential) => {
             console.log(userCredential); {
                 alert(`sign up successful`);
             }
         })
-=======
+
             .then((userCredential) => {
                 console.log(userCredential);
             })
->>>>>>> dc4a20430ee9ac89495da5f295a42a84aaee79d2
+
             .catch((error) => {
                 console.log(error);
             });

@@ -2,7 +2,6 @@ import AccountAnimation from '../assets/account-animation.gif'
 import { Link } from 'react-router-dom';
 import SignIn from '../components/auth/SignIn';
 import SignUp from '../components/auth/SignUp';
-import AuthDetails from '../components/auth/AuthDetails';
 import Ratings from './Ratings';
 
 
@@ -29,11 +28,7 @@ function Accounts() {
 
                             <SignIn />
 
-<<<<<<< HEAD
-                            
 
-=======
->>>>>>> dc4a20430ee9ac89495da5f295a42a84aaee79d2
                         </div>
 
                         <div className="col-md-6">
@@ -41,18 +36,18 @@ function Accounts() {
 
                             <SignUp />
 
-<<<<<<< HEAD
+
                             
 
                         </div>
 
                     
-=======
+
                         </div>
-                        <AuthDetails />
->>>>>>> dc4a20430ee9ac89495da5f295a42a84aaee79d2
+                       
+
                     </div>
-                </div>
+                
 
             </section>
             <Ratings />
