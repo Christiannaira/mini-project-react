@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
-
-function RealistLiterature() {
+function Realist() {
   const [books, setBooks] = useState([]);
 
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ function RealistLiterature() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=realAndLiterature&orderBy=newest&maxResults=12&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE"
+          "https://www.googleapis.com/books/v1/volumes?q=realist&orderBy=newest&maxResults=30&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -25,20 +25,23 @@ function RealistLiterature() {
 
   return (
     <>
+      {/*breadcrumb section layout*/}
+      <div className='book-breadcrumb'>
+        <Link to='/'>Home</Link><i className='bx bx-chevron-right'></i> <Link to="/categories">Categories</Link> <i className='bx bx-chevron-right'></i> Parenting & Relationships
+      </div>
       <section className="featured-books" id="featured-books">
         <div className="container featured-books-content">
-          <h2>Realist Literature</h2>
+          <h2>Parenting & Relationships</h2>
 
           <div className="row mt-3">
             {books.map((book) => (
-              <div className="book col-md-2 text-center">
+              <div className="book col-md-2 text-center" key={book.id}>
                 <div className="mb-3">
                   <div className="featured-book-img p-1">
-                    <div className="inner-block p-1">
+                    <div className="innerblock p-1">
                       <img
-                        src={book.volumeInfo.imageLinks.smallThumbnail}
+                        src={book.volumeInfo?.imageLinks?.smallThumbnail}
                         alt={`${book.volumeInfo.title} Book Cover`}
-
                         title={book.volumeInfo.title}
                         height={"310px"}
                         width={"100%"}
@@ -46,14 +49,19 @@ function RealistLiterature() {
                       />
                     </div>
                   </div>
+                  <div>
+                    <button className="">Add to Bookmark</button>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+
+
         </div>
       </section>
     </>
   );
 }
 
-export default RealistLiterature;
+export default Realist;

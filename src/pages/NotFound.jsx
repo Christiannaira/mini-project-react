@@ -1,8 +1,7 @@
 function NotFound() {
+    alert("not found")
     return (
         <>
-
-
         </>
     )
 }

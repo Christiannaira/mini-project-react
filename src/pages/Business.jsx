@@ -39,9 +39,9 @@ function Business() {
               <div className="book col-md-2 text-center">
                 <div className="mb-3">
                   <div className="featured-book-img p-1">
-                    <div className="inner-block p-1">
+                    <div className="innerblock p-1">
                       <img
-                        src={book.volumeInfo.imageLinks.smallThumbnail}
+                        src={book.volumeInfo?.imageLinks?.smallThumbnail}
                         alt={`${book.volumeInfo.title} Book Cover`}
 
                         title={book.volumeInfo.title}
