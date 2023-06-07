@@ -20,4 +20,3 @@ export const addToBookmark = (book) => {
       alert("Book has been bookmarked!");
     }
   };
-  
