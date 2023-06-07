@@ -761,6 +761,7 @@ section {
     background-color: #fff;
     height: 100%;
 }
+  
 
 .bookmarks input {
     padding: 10px 3rem;
@@ -862,6 +863,7 @@ section {
 .bookmarks h2 {
     font-family: 'Anton', sans-serif;
     color: #222;
+    margin-block-end: auto;
 }
 
 /*pagination section*/

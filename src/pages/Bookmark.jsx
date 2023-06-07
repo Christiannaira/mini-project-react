@@ -67,7 +67,7 @@ const Bookmark = () => {
   return (
     <>
       <section className="bookmarks col-md-12">
-        <div className="container bookmarks-content">
+        <div className="container bookmarks-content" id="bookmarks-content">
           <div className="main-content row">
             <h1 className="mb-4">BOOKMARK</h1>
 
