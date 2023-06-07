@@ -36,7 +36,7 @@ function Accounts() {
                             <SignUp />
 
                         </div>
-                        <AuthDetails />
+
                     </div>
                 </div>
 
