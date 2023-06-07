@@ -759,8 +759,111 @@ section {
     background-position: center;
     background-size: 10%;
     background-color: #fff;
-    height: 100vh;
+    height: 100%;
+}
+  
 
+.bookmarks input {
+    padding: 10px 3rem;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font-family: 'Antonio', sans-serif;
+}
+
+.bookmarks #bmButtons {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 280px;
+    background-color: #5A38FD;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-family: 'Antonio', sans-serif;
+    transition: .3s ease;
+    z-index: 1000;
+}
+
+.bookmarks #searchButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 280px;
+    background-color: #5A38FD;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-family: 'Antonio', sans-serif;
+    transition: .3s ease;
+    z-index: 1000;
+}
+
+.bookmarks #searchButton:hover {
+    background-color: #222;
+    width: 400px;
+}
+
+.bookmarks #clearSearch {
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 30px;
+    width: 280px;
+    background-color: #5A38FD;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-family: 'Antonio', sans-serif;
+    transition: .3s ease;
+    z-index: 1000;
+}
+
+.bookmarks #clearSearch:hover {
+    background-color: #222;
+    width: 400px;
+}
+
+.bookmarks #bmButton {
+    border-radius: 30px;
+    width: 100px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-family: 'Antonio', sans-serif;
+    transition: .3s ease;
+}
+
+.bookmarks #bmButton:hover {
+    background-color:#5A38FD;
+    height: 40px;
+}
+
+.bookmarks #clrButton {
+    border-radius: 30px;
+    width: 100px;
+    background-color: #8054c5;
+    color: #222;
+    border: none;
+    outline: none;
+    font-family: 'Antonio', sans-serif;
+    transition: .3s ease;
+}
+
+.bookmarks h2 {
+    font-family: 'Anton', sans-serif;
+    color: #222;
+    margin-block-end: auto;
 }
 
 /*pagination section*/
