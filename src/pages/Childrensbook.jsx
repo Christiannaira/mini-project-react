@@ -29,56 +29,33 @@ function Childrensbook() {
   return (
     <>
       <section className="featured-books" id="featured-books">
-      <div className="container featured-books-content">
-        <h2>Children's Book</h2>
+        <div className="container featured-books-content">
+          <h2>Children's Book</h2>
 
-<<<<<<< HEAD
           <div className="row mt-3">
             {books.map((book) => (
               <div className="book col-md-2 text-center" key={book.id}>
                 <div className="mb-3">
                   <div className="featured-book-img p-1">
                     <div className="innerblock p-1">
-                      <img
-                        src={book.volumeInfo.imageLinks.smallThumbnail}
+                      <img src={book.volumeInfo.imageLinks.smallThumbnail}
                         alt={`${book.volumeInfo.title} Book Cover`}
                         title={book.volumeInfo.title}
                         height={"310px"}
                         width={"100%"}
-                        onClick={() => navigate(`/bookdetails/${book.id}`)}
-                      />
+                        onClick={() => navigate(`/bookdetails/${book.id}`)} />
                     </div>
                   </div>
-                  <div>
-                    <button className="">Add to Bookmark</button>
-=======
-        <div className="row mt-3">
-          {books.map((book) => (
-            <div className="book col-lg-2 text-center" key={book.id}>
-              <div className="mb-3">
-                <div className="featured-book-img p-1">
-                  <div className="inner-block p-1">
-                    <img
-                      src={book.volumeInfo.imageLinks.smallThumbnail}
-                      alt={`${book.volumeInfo.title} Book Cover`}
-                      title={book.volumeInfo.title}
-                      height={"310px"}
-                      width={"100%"}
-                      onClick={() => navigate(`/bookdetails/${book.id}`)}
-                    />
-                    <button
-                      className="bookmark-icon"
-                      onClick={() => handleBookmark(book)}
-                    >Add to Bookmark</button>
->>>>>>> 40a7166c52b2e2a31aed90b1c5f85fa0b7946941
-                  </div>
+                  <button
+                    className="bookmark-icon"
+                    onClick={() => handleBookmark(book)}
+                  >Add to Bookmark</button>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section >
     </>
   );
 }
