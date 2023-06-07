@@ -1,3 +1,6 @@
+import AuthDetails from "../components/auth/AuthDetails";
+
+
 function Bookmark() {
     return (
         <>
@@ -6,6 +9,8 @@ function Bookmark() {
                     <div className="main-content">
                         <h1>BOOKMARK</h1>
 
+                        <AuthDetails />
+                            
                     </div>
                 </div>
             </section>

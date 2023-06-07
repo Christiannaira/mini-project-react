@@ -15,7 +15,9 @@ const SignUp = () => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            console.log(userCredential);
+            console.log(userCredential); {
+                alert(`sign up successful`);
+            }
         })
             .catch((error) => {
                 console.log(error);

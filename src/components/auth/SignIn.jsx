@@ -1,6 +1,8 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../../firebase";
+import { Link, useNavigate } from "react-router-dom";
+
 
 
 
@@ -14,22 +16,19 @@ const SignIn = () => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            console.log(userCredential)
+            console.log(userCredential);
         })
+
             .catch((error) => {
                 if( password !== setPassword(e.target.value)) {
                     alert(`password is incorrect!`);
                 } 
                
             })
-            .catch((error) => {
-                if( password !== setPassword(e.target.value) || email !== setEmail(e.target.value)) {
-                    alert(`user not found!`);
-                } 
-               
-            });
-
     };
+
+   
+    
 
     return(
         <>

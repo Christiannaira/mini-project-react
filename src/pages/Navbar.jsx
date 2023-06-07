@@ -30,7 +30,9 @@ function Navbar() {
                     <Link to="/bookmarks" data-bs-toggle="tooltip" data-bs-placement="top" title="Bookmark" className='icons'><img src={Bookmark} alt="bookmarks" width={'20px'} /></Link>
                     <a data-bs-toggle="tooltip" data-bs-placement="top" title="dark mode" className='icons lightmode'>
                         <img src={LightMode} alt="" width={'20px'} onClick={changeColor} /></a>
+                        
                 </div>
+
             </nav>
         </>
     )
