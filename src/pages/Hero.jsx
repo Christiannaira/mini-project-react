@@ -26,6 +26,8 @@ function Hero() {
 
     return (
         <>
+
+            {/*home section layout*/}
             <section className="home" id="home">
                 <div className="container home-content">
                     <div className="row  text-center">
@@ -33,7 +35,7 @@ function Hero() {
                             <h1>Unlock The Universe</h1>
 
                         </div>
-                        <div className="col-12">
+                        <div className="col-12" id="home-img">
                             <img src={HeroAnimation} alt="" width={'450px'} />
                         </div>
                         <div className="col-12">
@@ -61,17 +63,9 @@ function Hero() {
 
                     </div>
 
-                    <Search keyword={search} />
+                    {search ? <Search keyword={search} /> : ''}
 
 
-                    <ul class="pagination justify-content-start">
-                        <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
-                        <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
-                        <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
-
-                        <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
-                    </ul>
                 </div>
             </section>
 

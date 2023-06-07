@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 
 
@@ -13,7 +14,7 @@ function Romance() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=Romance&orderBy=newest&maxResults=12&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
+          "https://www.googleapis.com/books/v1/volumes?q=Romance&orderBy=newest&maxResults=30&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -26,24 +27,28 @@ function Romance() {
 
   return (
     <>
+      {/*breadcrumb section layout*/}
+      <div className='book-breadcrumb'>
+        <Link to='/'>Home</Link><i className='bx bx-chevron-right'></i> <Link to="/categories">Categories</Link> <i className='bx bx-chevron-right'></i> Romance
+      </div>
       <section className="featured-books" id="featured-books">
         <div className="container featured-books-content">
           <h2>Romance</h2>
 
           <div className="row mt-3">
             {books.map((book) => (
-              <div className="book col-lg-2 text-center">
+              <div className="book col-md-2 text-center">
                 <div className="mb-3">
                   <div className="featured-book-img p-1">
                     <div className="inner-block p-1">
                       <img
                         src={book.volumeInfo.imageLinks.smallThumbnail}
                         alt={`${book.volumeInfo.title} Book Cover`}
-                       
+
                         title={book.volumeInfo.title}
                         height={"310px"}
                         width={"100%"}
-                        onClick={()=>navigate(`/bookdetails/${book.id}`)}
+                        onClick={() => navigate(`/bookdetails/${book.id}`)}
                       />
                     </div>
                   </div>
