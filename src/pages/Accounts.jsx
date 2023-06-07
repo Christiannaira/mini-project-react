@@ -28,21 +28,6 @@ function Accounts() {
 
                             <SignIn />
 
-                            <form action="">
-                                <input type="text" placeholder='Username' className='form-control' />
-                                <input type="password" placeholder='Password' className='form-control' />
-                                <span>Forgot Password?</span>
-                                <label className='rememberMe' htmlFor='rememberMe'>
-                                    <input type="checkbox" id='rememberMe' /> <span>Remember me</span>
-                                </label>
-                                <div className="account-btn">
-                                    <a href="" className='btn btn-success'>Sign In</a>
-                                </div>
-                                <div className='mt-2'>
-                                    <p>Don't have an account? <a href="">Sign up</a></p>
-                                </div>
-                            </form>
-
                         </div>
 
                         <div className="col-md-6">
@@ -50,23 +35,12 @@ function Accounts() {
 
                             <SignUp />
 
-                            <form action="#">
-                                <input type="text" placeholder='Email' className='form-control' />
-                                <input type="text" placeholder='Username' className='form-control' />
-                                <input type="password" placeholder='Password' className='form-control' />
-                                <input type="password" placeholder='Confirm Password' className='form-control' />
-                                <label className='acceptTC' htmlFor="accept">
-                                    <input type="checkbox" id="accept" /> <span>Accept <a >Terms & Conditions</a></span>
-                                </label>
-                                <a href="#" className='btn btn-success'>Sign Up</a>
-                            </form>
-
                         </div>
 
                         <AuthDetails />
                     </div>
                 </div>
-                
+
             </section>
             <Ratings />
 
