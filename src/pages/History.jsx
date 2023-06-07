@@ -24,7 +24,7 @@ function Business() {
     <>
       <section className="featured-books" id="featured-books">
         <div className="container featured-books-content">
-          <h2>Hystory</h2>
+          <h2>History</h2>
 
           <div className="row mt-3">
             {books.map((book) => (
