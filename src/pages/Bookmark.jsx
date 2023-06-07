@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { FiEye, FiTrash } from 'react-icons/fi';
 
 const Bookmark = () => {
   const [books, setBooks] = useState([]);
@@ -66,15 +67,31 @@ const Bookmark = () => {
   return (
     <>
       <section className="bookmarks col-md-12">
-        <div className="container bookmarks-content">
+        <div className="container bookmarks-content" id="bookmarks-content">
           <div className="main-content row">
             <h1 className="mb-4">BOOKMARK</h1>
 
             <form onSubmit={handleSearch} className="mb-4">
-              <div className="input-group">
-                <input type="text" name="searchTerm" className="form-control" placeholder="Search by title or author" required />
-                <button type="submit" className="btn btn-primary">Search</button>
-                <button type="button" className="btn btn-secondary" onClick={handleClearSearch}>Clear Search</button>
+              <div className="input-group mb-3">
+                <input
+                  type="text"
+                  name="searchTerm"
+                  className="form-control"
+                  placeholder="Search by title or author"
+                />
+                <button type="submit" className="btn btn-primary" id="searchButton">
+                  Search
+                </button>
+              </div>
+              <br /><br />
+              <div className="input-group mb-3">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  id="clearSearch"
+                  onClick={handleClearSearch}
+                >Clear Search
+                </button>
               </div>
             </form>
 
@@ -91,9 +108,19 @@ const Bookmark = () => {
                     <div className="card-body">
                       <br></br>
                       {isBookmarked(book.id) ? (
-                        <button className="btn btn-danger" disabled>Bookmarked</button>
+                        <button 
+                        className="btn btn-secondary" 
+                        id="clrButton"
+                        disabled
+                        >Bookmarked
+                        </button>
                       ) : (
-                        <button className="btn btn-primary" onClick={() => handleBookmark(book)}>Bookmark</button>
+                        <button
+                          className="btn btn-primary"
+                          id="bmButton"
+                          onClick={() => handleBookmark(book)}
+                        >Bookmark
+                        </button>
                       )}
                     </div>
                   </div>
@@ -109,16 +136,18 @@ const Bookmark = () => {
                     <li key={bookmark.id} className="list-group-item">
                       <div className="d-flex justify-content-between">
                         <div>
-                          <h5>{bookmark.title}</h5>
+                          <p><b>{bookmark.title}</b></p>
                           <p>{bookmark.author}</p>
                         </div>
                         <div>
-                          <a href={bookmark.url} className="btn btn-primary mr-2">View</a>
+                          <a href={bookmark.url} className="btn btn-primary mr-2">
+                            <FiEye />
+                          </a>
                           <button
                             className="btn btn-danger"
                             onClick={() => handleDeleteBookmark(bookmark.id)}
                           >
-                            Delete
+                            <FiTrash />
                           </button>
                         </div>
                       </div>
