@@ -34,18 +34,18 @@ function FeaturedBooks() {
 
           <div className="row mt-3">
             {books.map((book) => (
-              <div className="book col-lg-2 text-center">
+              <div className="book col-md-2 text-center">
                 <div className="mb-3">
                   <div className="featured-book-img p-1">
-                    <div className="inner-block p-1">
+                    <div className="innerblock p-1">
                       <img
                         src={book.volumeInfo.imageLinks.smallThumbnail}
                         alt={`${book.volumeInfo.title} Book Cover`}
-                        
+
                         title={book.volumeInfo.title}
                         height={"310px"}
                         width={"100%"}
-                        onClick={()=>navigate(`/bookdetails/${book.id}`)}
+                        onClick={() => navigate(`/bookdetails/${book.id}`)}
                       />
                     </div>
                   </div>
