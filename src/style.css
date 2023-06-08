@@ -944,7 +944,7 @@ section {
 
 .pagination .page-link {
     background-color: #222;
-    padding: 10px 3rem;
+    padding: 10px 1rem;
     border: 1px solid #fff;
     color: #fff;
     transition: .3s ease;
