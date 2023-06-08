@@ -2,11 +2,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import Bookmark from '../assets/bookmarkViolet.png'
+import { Link } from "react-router-dom";
+import { addToBookmark } from "./bookmarkService";
 
 function Education() {
   const [books, setBooks] = useState([]);
 
   const navigate = useNavigate();
+  const handleBookmark = (book) => {
+    addToBookmark(book);
+  };
 
   useEffect(() => {
     const fetchData = async () => {

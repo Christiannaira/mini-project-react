@@ -2,13 +2,18 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-
+import Bookmark from '../assets/bookmarkViolet.png'
+import { addToBookmark } from "./bookmarkService";
 
 
 function Romance() {
   const [books, setBooks] = useState([]);
 
   const navigate = useNavigate();
+  const handleBookmark = (book) => {
+    addToBookmark(book);
+  };
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,6 +56,8 @@ function Romance() {
                         onClick={() => navigate(`/bookdetails/${book.id}`)}
                       />
                     </div>
+                    <img src={Bookmark} alt="" className="bookmark-icon"
+                      onClick={() => handleBookmark(book)} />
                   </div>
                 </div>
               </div>

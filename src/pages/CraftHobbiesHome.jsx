@@ -3,11 +3,15 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import Bookmark from '../assets/bookmarkViolet.png'
+import { addToBookmark } from "./bookmarkService";
 
 function Crafts() {
   const [books, setBooks] = useState([]);
 
   const navigate = useNavigate();
+  const handleBookmark = (book) => {
+    addToBookmark(book);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
