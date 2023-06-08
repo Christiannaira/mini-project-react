@@ -50,7 +50,7 @@ function Business() {
 
                         title={book.volumeInfo.title}
                         height={"310px"}
-                        width={"100%"}
+                        width={"200px"}
                         onClick={() => navigate(`/categoriesdetails/${book.id}`)}
                       />
                     </div>

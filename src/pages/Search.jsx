@@ -43,7 +43,7 @@ function Search({ keyword }) {
 
                                         title={book.volumeInfo.title}
                                         height={"310px"}
-                                        width={"100%"}
+                                        width={"200px"}
                                         onClick={() => navigate(`/bookdetails/${book.id}`)}
                                     />
                                 </div>

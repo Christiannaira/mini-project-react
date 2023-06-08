@@ -49,8 +49,8 @@ function Biographies() {
                         alt={`${book.volumeInfo.title} Book Cover`}
                         title={book.volumeInfo.title}
                         height={"310px"}
-                        width={"100%"}
-                        onClick={() => navigate(`/categoriesdetails/book.id}`)}
+                        width={"200px"}
+                        onClick={() => navigate(`/categoriesdetails/${book.id}`)}
                       />
                     </div>
                     <img src={Bookmark} alt="" className="bookmark-icon"
