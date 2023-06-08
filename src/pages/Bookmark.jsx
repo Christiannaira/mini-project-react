@@ -66,12 +66,12 @@ const Bookmark = () => {
 
   return (
     <>
-      <section className="bookmarks col-md-12">
+      <section className="bookmarks col-md-12 d-flex align-items-center justify-content-center">
         <div className="container bookmarks-content" id="bookmarks-content">
           <div className="main-content row">
-            <h1 className="mb-4">BOOKMARK</h1>
+            <h1 className="mb-4">NO BOOKMARKS.</h1>
 
-            <form onSubmit={handleSearch} className="mb-4">
+            {/* <form onSubmit={handleSearch} className="mb-4">
               <div className="input-group mb-3">
                 <input
                   type="text"
@@ -93,9 +93,9 @@ const Bookmark = () => {
                 >Clear Search
                 </button>
               </div>
-            </form>
+            </form> */}
 
-            <div className="row d-flex flex-wrap col-md-6">
+            {/* <div className="row d-flex flex-wrap col-md-6">
               {books.map((book) => (
                 <div key={book.id} className="col-lg-3 mb-2">
                   <div className="card h-80">
@@ -126,9 +126,9 @@ const Bookmark = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
-            {bookmarks.length > 0 && (
+            {/* {bookmarks.length > 0 && (
               <div className="mt-4 col-md-6">
                 <h2>Bookmarks</h2>
                 <ul className="list-group">
@@ -155,11 +155,11 @@ const Bookmark = () => {
                   ))}
                 </ul>
               </div>
-            )}
+            )} */}
 
-            {books.length === 0 && bookmarks.length === 0 && (
+            {/* {books.length === 0 && bookmarks.length === 0 && (
               <p>No bookmarks yet.</p>
-            )}
+            )} */}
           </div>
         </div>
       </section>
