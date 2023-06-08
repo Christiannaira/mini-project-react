@@ -992,6 +992,10 @@ section {
         width: 100%;
     }
 
+    .search-bar .btn {
+        width: 90px;
+    }
+
     /*navbar section design*/
 
     nav .navbar-logo {
