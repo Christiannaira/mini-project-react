@@ -65,12 +65,12 @@ const Bookmark = () => {
 
   return (
     <>
-      <section className="bookmarks col-md-12">
+      <section className="bookmarks col-md-12 d-flex align-items-center">
         <div className="container bookmarks-content" id="bookmarks-content">
           <div className="main-content row">
-            <h1 className="mb-4">BOOKMARK</h1>
+            <h1 className="mb-4">NO BOOKMARKS.</h1>
 
-            <form onSubmit={handleSearch} className="mb-4">
+            {/* <form onSubmit={handleSearch} className="mb-4">
               <div className="input-group mb-3">
                 <input
                   type="text"
@@ -158,7 +158,7 @@ const Bookmark = () => {
 
             {books.length === 0 && bookmarks.length === 0 && (
               <p>No bookmarks yet.</p>
-            )}
+            )} */}
           </div>
         </div>
       </section>
