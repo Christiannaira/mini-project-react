@@ -282,7 +282,7 @@ section {
 
 
 .books-txt h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: 'Anton', sans-serif;
     color: yellow;
 }
@@ -296,7 +296,7 @@ section {
 }
 
 .books-txt strong {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-right: 10px;
 }
 
