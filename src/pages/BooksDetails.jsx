@@ -49,11 +49,11 @@ const BooksDetails = () => {
           <div className="books-txt mt-3 bg-dark p-5">
             <h1>{book.volumeInfo?.title}</h1>
 
-            <h3 className="author"><strong>Author:</strong> {book.volumeInfo?.authors?.join(", ")}</h3>
-            <h3 className="publishDate"><strong>Publish Date:</strong> {book.volumeInfo?.publishedDate}</h3>
+            <h3 className="author"><strong>Author:</strong> {book.volumeInfo?.authors?.join(", ")} &nbsp;&nbsp;  <strong>Publish Date:</strong> {book.volumeInfo?.publishedDate}</h3>
+
             <h4 className="genre"><strong>Genres:</strong> {book.volumeInfo?.categories?.join(", ")}</h4>
 
-            <h4 className="summary"><strong>Brief Summary:</strong></h4>
+            <h4 className="summary mt-5"><strong>Brief Summary:</strong></h4>
             <p
               className=""
               dangerouslySetInnerHTML={{ __html: book.volumeInfo?.description }}

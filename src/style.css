@@ -287,17 +287,17 @@ section {
     color: yellow;
 }
 
-.books-img .author,
-.books-img .publishDate,
-.books-img .genre,
-.books-img .summary {
+.books-txt .author,
+.books-txt .publishDate,
+.books-txt .genre,
+.books-txt .summary {
     font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
 }
 
 .books-txt strong {
     font-size: 1.5rem;
-    margin-right: 1rem;
+    margin-right: 10px;
 }
 
 .book-details .btn-dark {
@@ -813,6 +813,18 @@ section {
     font-weight: 300;
 }
 
+.contact-form .btn {
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    font-family: 'Antonio', sans-serif;
+    transition: .3s ease;
+}
+
+.contact-form .btn:hover {
+    background-color: #5A38FD;
+
+}
 
 /*bookmarks section design*/
 
