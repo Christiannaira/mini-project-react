@@ -14,7 +14,7 @@ function Romance() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=Romance&orderBy=newest&maxResults=30&key=AIzaSyDE2MnXJyfh-Ncs8nWDI262F82lHuQZQk4"
+          "https://www.googleapis.com/books/v1/volumes?q=Romance&orderBy=newest&maxResults=30&key=AIzaSyC13_LMY76gJyYVCy9BxYtEUvHlHLUYXY4"
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -40,9 +40,9 @@ function Romance() {
               <div className="book col-md-2 text-center">
                 <div className="mb-3">
                   <div className="featured-book-img p-1">
-                    <div className="inner-block p-1">
+                    <div className="innerblock p-1">
                       <img
-                        src={book.volumeInfo.imageLinks.smallThumbnail}
+                        src={book.volumeInfo?.imageLinks?.smallThumbnail}
                         alt={`${book.volumeInfo.title} Book Cover`}
 
                         title={book.volumeInfo.title}

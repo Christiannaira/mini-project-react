@@ -33,6 +33,7 @@ import BooksDetails from './BooksDetails';
 
 
 
+
 function Index() {
     return (
         <>
@@ -45,6 +46,7 @@ function Index() {
                         <Route path="/bookmarks" element={<Bookmark />} />
                         <Route path="/bookdetails/:id" element={<BooksDetails />} />
                         <Route path="/categories" element={<Categories />} />
+                        <Route path="*" element={<NotFound />} />
                     </Route>
 
                     {/*categories links*/}
