@@ -934,9 +934,10 @@ section {
     transition: .3s ease;
 }
 
-.bookmarks h2 {
+.bookmarks h1 {
+    font-size: 5rem;
     font-family: 'Anton', sans-serif;
-    color: #222;
+    color: #5A38FD;
     margin-block-end: auto;
 }
 
@@ -1006,6 +1007,16 @@ section {
 
     .ratings {
         height: 90vh;
+    }
+
+    /*bookmark section design*/
+
+
+    .bookmarks h1 {
+        font-size: 3rem;
+        font-family: 'Anton', sans-serif;
+        color: #5A38FD;
+        margin-block-end: auto;
     }
 
 }
