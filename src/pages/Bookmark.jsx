@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
 const Bookmark = () => {
   const [books, setBooks] = useState([]);
   const [bookmarks, setBookmarks] = useState([]);
@@ -14,7 +13,7 @@ const Bookmark = () => {
           setBooks([]);
         } else {
           const response = await axios.get(
-            `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&orderBy=newest&maxResults=12&key=AIzaSyDPQiYZHWTItrRbHt1NdY-S92y9gcBvAPw`
+            `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&orderBy=newest&maxResults=12&key=AIzaSyCiDFODkwxGJbB7hdTCoQoiYoGRzJx7bDE`
           );
           setBooks(response.data.items);
         }
@@ -66,12 +65,12 @@ const Bookmark = () => {
 
   return (
     <>
-      <section className="bookmarks col-md-12 d-flex align-items-center justify-content-center">
+      <section className="bookmarks col-md-12">
         <div className="container bookmarks-content" id="bookmarks-content">
           <div className="main-content row">
-            <h1 className="mb-4">NO BOOKMARKS.</h1>
+            <h1 className="mb-4">BOOKMARK</h1>
 
-            {/* <form onSubmit={handleSearch} className="mb-4">
+            <form onSubmit={handleSearch} className="mb-4">
               <div className="input-group mb-3">
                 <input
                   type="text"
@@ -93,9 +92,9 @@ const Bookmark = () => {
                 >Clear Search
                 </button>
               </div>
-            </form> */}
+            </form>
 
-            {/* <div className="row d-flex flex-wrap col-md-6">
+            <div className="row d-flex flex-wrap col-md-6">
               {books.map((book) => (
                 <div key={book.id} className="col-lg-3 mb-2">
                   <div className="card h-80">
@@ -126,9 +125,9 @@ const Bookmark = () => {
                   </div>
                 </div>
               ))}
-            </div> */}
+            </div>
 
-            {/* {bookmarks.length > 0 && (
+            {bookmarks.length > 0 && (
               <div className="mt-4 col-md-6">
                 <h2>Bookmarks</h2>
                 <ul className="list-group">
@@ -141,13 +140,13 @@ const Bookmark = () => {
                         </div>
                         <div>
                           <a href={bookmark.url} className="btn btn-primary mr-2">
-                            <FiEye />
+                            View
                           </a>
                           <button
                             className="btn btn-danger"
                             onClick={() => handleDeleteBookmark(bookmark.id)}
                           >
-                            <FiTrash />
+                            Delete
                           </button>
                         </div>
                       </div>
@@ -155,11 +154,11 @@ const Bookmark = () => {
                   ))}
                 </ul>
               </div>
-            )} */}
+            )}
 
-            {/* {books.length === 0 && bookmarks.length === 0 && (
+            {books.length === 0 && bookmarks.length === 0 && (
               <p>No bookmarks yet.</p>
-            )} */}
+            )}
           </div>
         </div>
       </section>
