@@ -13,7 +13,7 @@ function Contact() {
                     </div>
                     <div className="main-content text-center d-md-flex align-items-center justify-content-center">
                         <h1>CONTACT US</h1>
-                        <img src={ContactAnimation} alt='contact-animation' width={'300px'} />
+
                     </div>
                     <div className="row contact-row">
                         <div className="col-md-12">
@@ -37,7 +37,9 @@ function Contact() {
                                             <h3>BUSINESS HOURS</h3>
                                             <span>1 (234) 567-891, 1 (234) 987 654</span>
                                         </div>
+                                        <img src={ContactAnimation} alt='contact-animation' width={'300px'} />
                                     </div>
+
                                 </div>
                                 <div className="col-md-6 contact-form">
                                     <h2>CONTACT US</h2>
