@@ -7,7 +7,7 @@ function Cta() {
                 <div className="container cta-content">
                     <div className="row text-center">
                         <div className="col-md-12">
-                            <h2>START READING!!</h2>
+                            <h2>START SEARCHING!!</h2>
                         </div>
 
                     </div>
