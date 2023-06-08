@@ -29,8 +29,7 @@ import Biographies from './Biographies';
 import ComicsAndGraphic from './ComicsAndGraphic';
 import CraftHobbiesHome from './CraftHobbiesHome';
 import BooksDetails from './BooksDetails';
-
-
+import CategoriesDetails from './CategoriesDetails';
 
 
 
@@ -45,6 +44,7 @@ function Index() {
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/bookmarks" element={<Bookmark />} />
                         <Route path="/bookdetails/:id" element={<BooksDetails />} />
+                        <Route path="/categoriesdetails/:id" element={<CategoriesDetails />} />
                         <Route path="/categories" element={<Categories />} />
                         <Route path="*" element={<NotFound />} />
                     </Route>

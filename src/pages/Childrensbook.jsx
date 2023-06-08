@@ -47,7 +47,7 @@ function Childrensbook() {
                         title={book.volumeInfo.title}
                         height={"310px"}
                         width={"100%"}
-                        onClick={() => navigate(`/bookdetails/${book.id}`)} />
+                        onClick={() => navigate(`/categoriesdetails/${book.id}`)} />
                     </div>
                     <img src={Bookmark} alt="" className="bookmark-icon"
                       onClick={() => handleBookmark(book)} />
